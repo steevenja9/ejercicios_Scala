@@ -30,7 +30,10 @@ están representados por las clases y rasgos en Scala.
 5)Ejecutar en JVM y puede ejecutar código Java: Java y Scala tienen un entorno de ejecución común. Por lo que el usuario puede pasar fácilmente de Java a Scala.
 El compilador Scala compila el programa en un archivo .class, que contiene el código de bytes que puede ejecutar la JVM.
 
-TRADUCCION DE EJERCICIOS DE HASKEL A SCALA                              
+TRADUCCION DE EJERCICIOS DE HASKEL A SCALA       
+
+
+
 
 /*S2. Traductor Haskell*/
 
@@ -117,6 +120,51 @@ factorial2 n
   |n == 0 = 1
   |n > 0 = n * factorial2 ( n - 1)
   |otherwise = error "valor negativo"
+
+
+ ===================================================================================================================================== 
+  LISTAS SCALA
+  
+/* añadir un elementos al principio de la lista */
+scala> val l3 = 4 :: l2
+l3: List[Int] = List(4, 1, 2, 3)
+
+/+ concatenar listas */
+List = List :+ List2
+
+/* añadir n elementos a la lista */
+scala> List.fill(3)("foo")
+res1: List[String] = List(foo, foo, foo)
+
+
+/*recorrer lista*/
+var i=0
+for(x <- lista){
+i +=1;
+}
+======================================================================================================================================
+val list2 = List(1.0,2.0,3.0,4.0,5.0)             //> list2  : List[Double] = List(1.0, 2.0, 3.0, 4.0, 5.0)
+val list = List (5.0,3.0,1.0,2.0,4.0)             //> list  : List[Double] = List(5.0, 3.0, 1.0, 2.0, 4.0)
+
+def mifuncion(lis: List[Double], lis2: List[Double]= List(0,0) ) = {
+
+if(lis.length<lis2.length)
+lis :+ List.fill(lis2.length-lis.length)(0)
+else
+lis2 :+ List.fill(lis.length-lis2.length)(0)
+ 
+ 
+var dev: List[Double] = List()
+var i=0
+for(x <- lis){
+dev = dev :+ lis2(i)+x
+i +=1
+}
+dev
+}                                                 //> mifuncion: (lis: List[Double], lis2: List[Double])List[Double]
+mifuncion(list,list2)                             //> res0: List[Double] = List(6.0, 5.0, 4.0, 6.0, 9.0)
+
+
 
 
   
