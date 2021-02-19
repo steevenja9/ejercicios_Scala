@@ -78,8 +78,10 @@ val b= 1.0  val z = 1.5555
 val c= 3.0 
 def suma(x: Double, y: Double): Double = x + y 
 suma(b,c)                                         //> res1: Double = 4.0
-def suma3(x: Double, y: Double,z: Double) : Double = x + y + z
-suma3(b,c,z)                                      //> res2: Double = 5.5555
+
+/*inicializacion parcial genera otra funcion quitando parte de la cabecera */
+def suma3(x: Double, y: Double=1,z: Double=2) : Double = x + y + z
+suma3(z)                                      //> res2: Double = 4.5555
 
 ===========================================================================================================================================================================
 
@@ -152,7 +154,6 @@ if(lis.length<lis2.length)
 lis :+ List.fill(lis2.length-lis.length)(0)
 else
 lis2 :+ List.fill(lis.length-lis2.length)(0)
- 
  
 var dev: List[Double] = List()
 var i=0
