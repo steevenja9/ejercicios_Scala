@@ -73,20 +73,22 @@ soloprimero(2,7/0)                                //> 2
 --OTRO EJEMPLO LO ENTIENDO MEJOR ASI -- 
 def mul(x:Double ,y: => Double) = x*x                //> mul: (x: Double, y:Double)Double
 
-//DENTRO DE ESCALA <br>
-mul(5,5+2)   //> NO EVALUA EL SEGUNDO PARAMETRO            //> res0: Double = 25.0 <br>
-5*5<br>
-25<br>
+//DENTRO DE ESCALA 
+mul(5,5+2)   //> NO EVALUA EL SEGUNDO PARAMETRO            //> res0: Double = 25.0
+5*5
+25
 
-SIN EVAULACION PEREZOSA<br>
-mul(5,5+2)                                       //> EVALUA Y HACE LA SUMA DEL 5+2 <br>
-mul(5,7) <br>
-5*5 <br>
-25 <br>
+SIN EVAULACION PEREZOSA
+mul(5,5+2)                                       //> EVALUA Y HACE LA SUMA DEL 5+2
+mul(5,7)
+5*5
+25
 
 
 
 <b>4.FUNCIONES DE ORDEN SUPERIOR</b>
+
+Las funciones de orden superior son aquellas que toman por parametros otras funciones, o devuelven como resultado una funcion.
 
 
 
