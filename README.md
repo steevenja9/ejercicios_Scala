@@ -41,7 +41,7 @@ var inc = (x:Int) => x+1
 
 
 
-<b>2.PRIORIDAD DE OPERADORES Y TIPOS.</b>
+## 2.PRIORIDAD DE OPERADORES Y TIPOS.</b>
 
 <img src="imagenes/Prioridad_tipos.png" width="800" height="500">
 
@@ -86,7 +86,7 @@ mul(5,7)<br>
 
 
 
-<b>4.FUNCIONES DE ORDEN SUPERIOR</b>
+## 4.FUNCIONES DE ORDEN SUPERIOR</b>
 
 Las funciones de orden superior son aquellas que toman por parametros otras funciones, o devuelven como resultado una funcion.
 
