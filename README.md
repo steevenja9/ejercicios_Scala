@@ -196,7 +196,8 @@ En Scala para usar listas tenemos que usar el tipo List.<br>
 	}                                                 //> sumlista: (lis: List[Int])Int
 
 	sumlista(list)                                    //> res0: Int = 15
-
+	
+ //Buscar en una lista los numeros pares
 
 	def mifiltro[A](lista: List[A], pred: (A)=>Boolean): List[A] = {
 		if (lista.isEmpty) Nil
