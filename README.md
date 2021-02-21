@@ -73,19 +73,16 @@ mul(5,7)<br>
 ## 4.FUNCIONES DE ORDEN SUPERIOR</br>
 Las funciones de orden superior son aquellas que toman por parametros otras funciones, o devuelven como resultado una funcion. <br>
 
-
+--definir funcion f: Double => Double
 def FuncionValor(f: Double => Double, x: Double , y: Double , z: Double ) = { <br>
    function body <br>
    return [expr] <br>
 }
 
-funcion anonima
-def lambda = new Function1[Int,Int]{  
-	def anonima(x:Int):Int = x+1;  
-} 
 
-define un parámetro de entrada de tipo int función anónima: <BR>
-var inc = (x:Int) => x+1
+def map (f: Int=>Int, l: List[Int]):List[Int] =
+      if (l == Nil) l else f(l.head)::map(f,l.tail)
+      
 
 ## 5.CURRIFICACIÓN <br>
 
