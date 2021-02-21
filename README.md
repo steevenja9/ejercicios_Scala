@@ -103,7 +103,33 @@ rest(3) <br>                                         //> res0: Double = 4.0 <br>
 
 ## 6.COMPOSICION DE FUNCIONES<br>
 
+En la programacion funcional las funciones suelen ser pequeñas y cohesivas con lo cual las combinamos para formar funciones mas grandes.<br> 
 
+Por ejemplo, en haskell es natural hacer algo como:<br> 
+(length . filter aprobado . map parcial) alumnos<br> 
+
+Tenemos las funciones length, filter y map (sin contar las que usamos cómo parámetro) y las combinamos en secuencia para hacer algoritmos más complejos.<br> 
+
+En el paradigma orientado a objetos hacemos:<br> 
+
+alumnos.map(_.parcial).filter(_.aprobado).length<br> 
+Cual es la diferencia?<br> 
+
+En funcional cada uno tiene que construir las operaciones por afuera de los datos, en objetos los mismos datos pueden proveer las funciones. No necesitamos componer, porque<br>  podemos mandarle mensajes al resultado de una operación.<br> 
+
+Creemos las siguientes funciones y veamos como funciona la composición:<br> 
+
+Sumar el valor de todos los niveles<br> 
+val toList: Niveles => List[Int] = niveles => List(niveles._1, niveles._2, niveles._3)<br> 
+val sumaNiveles: Niveles => Int = toList.andThen(_.sum)<br> 
+Calcular la diferencia entre el nivel más alto y el más bajo<br> 
+val maxNivel: Niveles => Int = toList.andThen(_.max)<br> 
+val minNivel: Niveles => Int = toList.andThen(_.min)<br> 
+val diferenciaNiveles: Niveles => Int = niveles => maxNivel(niveles) - minNivel(niveles)<br> 
+Sumar los niveles de una persona<br> 
+  def niveles(persona: Persona) = persona._2<br> 
+  val sumaNivelesPersona: Persona => Int = sumaNiveles.compose(niveles)<br> 
+Podemos ver que las funciones pueden ser compuestas usando “andThen” y “compose” para crear nuevas funciones más complejas.<br> 
 
 
 
