@@ -150,9 +150,7 @@ En Scala para usar listas tenemos que usar el tipo List.<br>
 	res1: List[String] = List(foo, foo, foo)<br>
 
 // Recorrer lista con for// <br>
-	var i=0 <br>
-	for(x <- lista){ <br>
-	i +=1; <br>
-	} <br>
-
+	
+     for(x <- lista) <br>
+	
 
