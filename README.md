@@ -24,21 +24,6 @@ def functionName ([tipos]) : [return tipos] = {
    return [expr]
 }
 
-funcion con funciones como parametros
-def FuncionValor(f: Double => Double, x: Double , y: Double , z: Double ) = {
-   function body
-   return [expr]
-
-}
-
-funcion anonima
-def lambda = new Function1[Int,Int]{  
-	def anonima(x:Int):Int = x+1;  
-} 
-
-define un parámetro de entrada de tipo int función anónima: <BR>
-var inc = (x:Int) => x+1
-
 
 
 ## 2.PRIORIDAD DE OPERADORES Y TIPOS.<br>
@@ -89,6 +74,21 @@ mul(5,7)<br>
 ## 4.FUNCIONES DE ORDEN SUPERIOR</b>
 
 Las funciones de orden superior son aquellas que toman por parametros otras funciones, o devuelven como resultado una funcion.
+
+funcion con funciones como parametros
+def FuncionValor(f: Double => Double, x: Double , y: Double , z: Double ) = {
+   function body
+   return [expr]
+
+}
+
+funcion anonima
+def lambda = new Function1[Int,Int]{  
+	def anonima(x:Int):Int = x+1;  
+} 
+
+define un parámetro de entrada de tipo int función anónima: <BR>
+var inc = (x:Int) => x+1
 
 
 
