@@ -62,8 +62,8 @@ EJ: Y: => Any <br>
 <b>Dentro de scala</b> <br>
 
 	mul(5,5+2)   //> NO EVALUA EL SEGUNDO PARAMETRO            //> res0: Double = 25.0
-	5*5<br>
-	25<br>
+	5*5
+	25
 
 SIN EVAULACION PEREZOSA <br>
 
@@ -133,8 +133,8 @@ Sumar el valor de todos los niveles<br>
 	
 	Sumar los niveles de una persona
 	
-	  def niveles(persona: Persona) = persona._2<br> 
-	  val sumaNivelesPersona: Persona => Int = sumaNiveles.compose(niveles)<br> 
+	  def niveles(persona: Persona) = persona._2
+	  val sumaNivelesPersona: Persona => Int = sumaNiveles.compose(niveles)
 
 ## 7.LISTAS<br>
 
