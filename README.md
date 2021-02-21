@@ -172,6 +172,6 @@ En Scala para usar listas tenemos que usar el tipo List.<br>
 
 // Recorrer lista con for// <br>
 	
-     for(x <- lista) 
+     for(x <- lista) x = x+1
 	
 
