@@ -89,7 +89,9 @@ def lambda = new Function1[Int,Int]{
 define un parámetro de entrada de tipo int función anónima: <BR>
 var inc = (x:Int) => x+1
 
+<b>5.CURRIFICACIÓN</b> <br>
 
+En Scala, cuando un método es invocado con un número menor de listas de parámetros, en su lugar se devolverá una función que toma las listas faltantes como sus argumentos.
 
 
 
