@@ -45,7 +45,7 @@ var inc = (x:Int) => x+1
 
 <img src="imagenes/Prioridad_tipos.png" width="800" height="500">
 
-<img src="imagenes/Prioridad_tipos.png" width="800" height="500">
+<img src="imagenes/prioridadOperadores.png" width="800" height="500">
 
 <br>3.EVALUACIÓN PEREZOSA</br>
 La evaluación perezosa, tambien llamada lazy evaluation o call-by-need, permite que un bloque de código sea evaluado sólo cuando se necesite, esto nos permite realizar código que tiene un rendimiento superior en ciertas situaciones
