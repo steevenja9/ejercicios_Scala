@@ -212,10 +212,10 @@ En Scala para usar listas tenemos que usar el tipo List.<br>
 	
 // Lista invertida
 
-		def reversoList(list: List[Int]): List[Int] = list match {
-		 case head :: tail => reverseList(tail) :+ head
-		 case Nil => Nil
-		 }
+	def reversoList(list: List[Int]): List[Int] = list match {
+	 case head :: tail => reverseList(tail) :+ head
+	 case Nil => Nil
+	 }
 	
 ## 8.PATRONES<br>
 
