@@ -1,6 +1,6 @@
 DOCUMENTACION SCALA
 
-0.INTRODUCCIÓN
+0.INTRODUCCIÓN <br> <br>
 Scala como lenguaje de programación es multi-paradigma y fue diseñado para expresar patrones comunes de programación de forma concisa, elegante y con tipos seguros. Teniendo características de lenguajes funcionales y orientados a objetos(OOP). Scala se ejecuta sobre la maquina virtual de java, con lo cual permite la unión con java. Esto es fantastico porque se puede programar en Java y Scala al mismo tiempo.
 Algunas de las caracteristicas que definen Scala son:
 <ul>
@@ -11,7 +11,7 @@ Algunas de las caracteristicas que definen Scala son:
 <li>El ser un lenguaje funcional hace que la computación pueda distribuirse en servidores Data Center, con lo cual lo hace muy util para Big Data.</li>
 <li>Es extensible, hace muy facil el uso de nuevas librerias.</li>
 
-</ul>
+</ul> <br>
 
 1.DEFINICIÓN DE FUNCIONES.
 
@@ -22,4 +22,8 @@ Para definir una función se usa "def" y el nombre de la función. La declaraci�
 2.PRIORIDAD DE OPERADORES Y TIPOS.
 
 <img src="imagenes/Prioridad_tipos.png" width="800" height="500">
+
+En Scala todo hereda de Any
+
+
 
