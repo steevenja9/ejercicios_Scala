@@ -36,7 +36,7 @@ def lambda = new Function1[Int,Int]{
 	def anonima(x:Int):Int = x+1;  
 } 
 
-define un parámetro de entrada de tipo int función anónima:
+define un parámetro de entrada de tipo int función anónima: <BR>
 var inc = (x:Int) => x+1
 
 
