@@ -68,21 +68,20 @@ soloprimero(2,7/0)                                //> 2
 
 --SIN DEFINIR EVALUARIA EL 7/0 Y DARIA ERROR <br>
 
---OTRO EJEMPLO PARA ENTENDER MEJOR
+## OTRO EJEMPLO PARA ENTENDERLO MEJOR
+ 
+def mul(x:Double ,y: => Double) = x*x                //> mul: (x: Double, y:Double)Double <br>
 
---OTRO EJEMPLO LO ENTIENDO MEJOR ASI -- 
-def mul(x:Double ,y: => Double) = x*x                //> mul: (x: Double, y:Double)Double
+## Dentro de escala 
+mul(5,5+2)   //> NO EVALUA EL SEGUNDO PARAMETRO            //> res0: Double = 25.0<br>
+5*5<br>
+25<br>
 
-//DENTRO DE ESCALA 
-mul(5,5+2)   //> NO EVALUA EL SEGUNDO PARAMETRO            //> res0: Double = 25.0
-5*5
-25
-
-SIN EVAULACION PEREZOSA
-mul(5,5+2)                                       //> EVALUA Y HACE LA SUMA DEL 5+2
-mul(5,7)
-5*5
-25
+SIN EVAULACION PEREZOSA <br>
+mul(5,5+2)                                       //> EVALUA Y HACE LA SUMA DEL 5+2 <br>
+mul(5,7)<br>
+5*5<br>
+25<br>
 
 
 
