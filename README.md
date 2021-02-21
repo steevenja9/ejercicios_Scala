@@ -104,20 +104,15 @@ rest(3) <br>                                         //> res0: Double = 4.0 <br>
 ## 6.COMPOSICION DE FUNCIONES<br>
 
 En la programacion funcional las funciones suelen ser pequeñas y cohesivas con lo cual las combinamos para formar funciones mas grandes.<br> 
-
-Por ejemplo, en haskell es natural hacer algo como:<br> 
-(length . filter aprobado . map parcial) alumnos<br> 
-
-Tenemos las funciones length, filter y map (sin contar las que usamos cómo parámetro) y las combinamos en secuencia para hacer algoritmos más complejos.<br> 
-
-En el paradigma orientado a objetos hacemos:<br> 
-
+Por ejemplo, en haskell podríamos hacer esto:<br> 
+(length . filter aprobado . map parcial) alumnos<br>  
+Tenemos las funciones length, filter y map (sin contar las que usamos cómo parámetro) y las combinamos en secuencia para hacer algoritmos más complejos.<br>
+En el paradigma orientado a objetos hariamos:<br> 
 alumnos.map(_.parcial).filter(_.aprobado).length<br> 
-Cual es la diferencia?<br> 
+La diferencia es que en la programación funcional cada uno tiene que construir las operaciones por afuera de los datos, en objetos los mismos datos pueden proveer las funciones. No necesitamos componer, porque podemos mandarle mensajes al resultado de una operación.<br>
+Las funciones pueden ser compuestas usando “compose” y “andThen” para crear nuevas funciones más complejas.<br>
 
-En funcional cada uno tiene que construir las operaciones por afuera de los datos, en objetos los mismos datos pueden proveer las funciones. No necesitamos componer, porque<br>  podemos mandarle mensajes al resultado de una operación.<br> 
-
-Creemos las siguientes funciones y veamos como funciona la composición:<br> 
+Creemos las siguientes funciones y veamos como funciona la composición enn Scala:<br> 
 
 Sumar el valor de todos los niveles<br> 
 val toList: Niveles => List[Int] = niveles => List(niveles._1, niveles._2, niveles._3)<br> 
@@ -129,7 +124,6 @@ val diferenciaNiveles: Niveles => Int = niveles => maxNivel(niveles) - minNivel(
 Sumar los niveles de una persona<br> 
   def niveles(persona: Persona) = persona._2<br> 
   val sumaNivelesPersona: Persona => Int = sumaNiveles.compose(niveles)<br> 
-Podemos ver que las funciones pueden ser compuestas usando “andThen” y “compose” para crear nuevas funciones más complejas.<br> 
 
 
 
