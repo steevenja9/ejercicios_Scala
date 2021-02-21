@@ -112,11 +112,15 @@ La currificación es un mecanismo para la invocación parcial de funciones. Al l
 ## 6.COMPOSICION DE FUNCIONES<br>
 
 En la programacion funcional las funciones suelen ser pequeñas y cohesivas con lo cual las combinamos para formar funciones mas grandes.<br> 
-Por ejemplo, en haskell podríamos hacer esto:<br> 
-(length . filter aprobado . map parcial) alumnos<br>  
+Por ejemplo, en haskell podríamos hacer esto:<br>
+
+	(length . filter aprobado . map parcial) alumnos 
+	
 Tenemos las funciones length, filter y map (sin contar las que usamos cómo parámetro) y las combinamos en secuencia para hacer algoritmos más complejos.<br>
 En el paradigma orientado a objetos hariamos:<br> 
-alumnos.map(_.parcial).filter(_.aprobado).length<br> 
+
+	alumnos.map(_.parcial).filter(_.aprobado).length
+
 La diferencia es que en la programación funcional cada uno tiene que construir las operaciones por afuera de los datos, en objetos los mismos datos pueden proveer las funciones. No necesitamos componer, porque podemos mandarle mensajes al resultado de una operación.<br>
 Las funciones pueden ser compuestas usando “compose” y “andThen” para crear nuevas funciones más complejas.<br>
 
