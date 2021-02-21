@@ -1,6 +1,6 @@
 <h1> DOCUMENTACION SCALA </h1>
 
-0.INTRODUCCIÓN <br> <br>
+<b>0.INTRODUCCIÓN</b> <br> <br>
 Scala como lenguaje de programación es multi-paradigma y fue diseñado para expresar patrones comunes de programación de forma concisa, elegante y con tipos seguros. Teniendo características de lenguajes funcionales y orientados a objetos(OOP). Scala se ejecuta sobre la maquina virtual de java, con lo cual permite la unión con java. Esto es fantastico porque se puede programar en Java y Scala al mismo tiempo.
 Algunas de las caracteristicas que definen Scala son:
 <ul>
@@ -13,17 +13,26 @@ Algunas de las caracteristicas que definen Scala son:
 
 </ul> <br>
 
-1.DEFINICIÓN DE FUNCIONES.
+<b>1.DEFINICIÓN DE FUNCIONES.</b>
 
 <img src="imagenes/funciones.png" width="400">
 
 Para definir una función se usa "def" y el nombre de la función. La declaración es muy similar a los lenguajes orientado a objetos ya que los parametros se colocan entre parentesis con su tipo. El operador ":" sirve para especificar dicho tipo, tanto de variables como de la propia función.
 
-2.PRIORIDAD DE OPERADORES Y TIPOS.
+<b>2.PRIORIDAD DE OPERADORES Y TIPOS.</b>
 
 <img src="imagenes/Prioridad_tipos.png" width="800" height="500">
 
 <img src="imagenes/Prioridad_tipos.png" width="800" height="500">
+
+<b>3.EVALUACIÓN PEREZOSA</b>
+La evaluación perezosa, tambien llamada lazy evaluation o call-by-need, permite que un bloque de código sea evaluado sólo cuando se necesite, esto nos permite realizar código que tiene un rendimiento superior en ciertas situaciones
+En scala, se utilizan los lazy val, que solo se evaluan cuando se utilizan por primera vez.
+
+<b>4.FUNCIONES DE ORDEN SUPERIOR</b>
+
+
+
 
 
 
