@@ -56,15 +56,15 @@ En scala, se utilizan los lazy val, que solo se evaluan cuando se utilizan por p
 Las funciones tambien pueden declarar parametros de Evaluacion perezosa CON Y: => Any
 EJERCICIO DE CLASE
 
-HASKELL
+<h3>HASKELL</h3> <br>
 SoloPrimero::a->b->a
 soloPrimero x _ = x
 
-SCALA
-def soloprimero(x:Any, y: => Any) =  {
-println(x)
-}                                                 //> solo: (x: Any, y: => Any)Unit
-soloprimero(2,7/0)                                //> 2
+<h3>SCALA</h3> <br>
+def soloprimero(x:Any, y: => Any) =  { <br>
+println(x)  <br>
+}                                                 //> solo: (x: Any, y: => Any)Unit <br>
+soloprimero(2,7/0)                                //> <br>
 
 --SIN DEFINIR EVALUARIA EL 7/0 Y DARIA ERROR <br>
 
