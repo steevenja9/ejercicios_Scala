@@ -216,7 +216,21 @@ En Scala para usar listas tenemos que usar el tipo List.<br>
 	 case head :: tail => reverseList(tail) :+ head
 	 case Nil => Nil
 	 }
-	
+	 
+	 
+  // Obtener un elemnto de una lista
+  
+	  def getElemlist(list: List[Int], acc: (Int, Int)):Int = list match {
+	    case Nil => 0
+	    case head :: tail => {
+	     if (acc._1 == acc._2)     // 1
+	     list.head
+	    else
+	      getElemlist(tail, (acc._1 + 1, acc._2))     // 2
+	   }
+	   }                                              //> getElemlist: (list: List[Int], acc: (Int, Int))Int
+
+	  getElemlist(list, (0, 1))   // 3                //> res0: Int = 3
 ## 8.PATRONES<br>
 
 Los patrones es una forma de estructurar el código de forma que al ejecutarse funciona de una manera muy similar a una estructura de control de switch.
