@@ -53,10 +53,11 @@ En scala, se utilizan los lazy val, que solo se evaluan cuando se utilizan por p
 <img src="imagenes/lazyval.png" width="250" align="left" > <br>
 
 
-Las funciones tambien pueden declarar parametros de Evaluacion perezosa CON Y: => Any
-EJERCICIO DE CLASE
+Las funciones tambien pueden declarar parametros de Evaluacion perezosa<br>
+EJ: Y: => Any <br>
 
-<h3>HASKELL</h3> <br>
+
+<h3>EJERCICIO DE CLASE HASKELL</h3> <br>
 SoloPrimero::a->b->a
 soloPrimero x _ = x
 
