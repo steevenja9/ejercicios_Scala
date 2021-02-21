@@ -1,4 +1,4 @@
-<h1> DOCUMENTACION SCALA </h1>
+# DOCUMENTACION SCALA 
 
 <b>0.INTRODUCCIÓN</b> <br> <br>
 Scala como lenguaje de programación es multi-paradigma y fue diseñado para expresar patrones comunes de programación de forma concisa, elegante y con tipos seguros. Teniendo características de lenguajes funcionales y orientados a objetos(OOP). Scala se ejecuta sobre la maquina virtual de java, con lo cual permite la unión con java. Esto es fantastico porque se puede programar en Java y Scala al mismo tiempo.
@@ -13,7 +13,7 @@ Algunas de las caracteristicas que definen Scala son:
 
 </ul> <br>
 
-<b>1.DEFINICIÓN DE FUNCIONES.</b>
+## 1.DEFINICIÓN DE FUNCIONES.</b>
 
 <img src="imagenes/funciones.png" width="400">
 
