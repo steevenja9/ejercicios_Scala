@@ -209,6 +209,14 @@ En Scala para usar listas tenemos que usar el tipo List.<br>
 
 	miFiltro(List(1,2,3,4), par)                      //> res0: List[Int] = List(2, 4)
 	
+	
+// Ultimo elemento de una lista Forma Recursiva
+
+		def reversoList(list: List[Int]): List[Int] = list match {
+		 case head :: tail => reverseList(tail) :+ head
+		 case Nil => Nil
+		 }
+	
 ## 8.PATRONES<br>
 
 Los patrones es una forma de estructurar el código de forma que al ejecutarse funciona de una manera muy similar a una estructura de control de switch.
