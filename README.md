@@ -63,14 +63,14 @@ soloPrimero x _ = x
 <h3>SCALA</h3> <br>
 def soloprimero(x:Any, y: => Any) =  { <br>
 println(x)  <br>
-}                                                 //> solo: (x: Any, y: => Any)Unit <br>
-soloprimero(2,7/0)                                //> <br>
+} <br>
+soloprimero(2,7/0)                               //> res0: Int = 2 <br> 
 
---SIN DEFINIR EVALUARIA EL 7/0 Y DARIA ERROR <br>
+--Sin definir el parametro como perezoso este hace la operacion 7/0 Y DARIA ERROR <br>
 
 ### Otro ejemplo para entenderlo mejor
  
-def mul(x:Double ,y: => Double) = x*x                //> mul: (x: Double, y:Double)Double <br>
+def mul(x:Double ,y: => Double) = x*x                 <br>
 
 ### Dentro de scala 
 mul(5,5+2)   //> NO EVALUA EL SEGUNDO PARAMETRO            //> res0: Double = 25.0<br>
