@@ -101,6 +101,7 @@ def suma2(x:Double)=(y:Double) => x + y        <br>
 val rest=suma2(1)                                <br>
 rest(3) <br>                                         //> res0: Double = 4.0 <br>
 
+## 6.COMPOSICION DE FUNCIONES<br>
 
 
 
