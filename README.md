@@ -173,6 +173,16 @@ En Scala para usar listas tenemos que usar el tipo List.<br>
 // Recorrer lista con for// <br>
 	
      for(x <- lista) x = x+1
+     
+ //Ejercicios con listas <br>
+ //Primer elemento de la lista <br>
+ 
+	 def firstelement(l: List[Any]) = {
+	  l.head
+	}                                                 //> firstelement: (l: List[Any])Any
+	firstelement(list)                                //> res0: Any = 5
+
+ 
 	
 ## 8.PATRONES<br>
 
