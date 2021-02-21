@@ -49,8 +49,8 @@ var inc = (x:Int) => x+1
 
 <b>3.EVALUACIÓN PEREZOSA</b>
 La evaluación perezosa, tambien llamada lazy evaluation o call-by-need, permite que un bloque de código sea evaluado sólo cuando se necesite, esto nos permite realizar código que tiene un rendimiento superior en ciertas situaciones
-En scala, se utilizan los lazy val, que solo se evaluan cuando se utilizan por primera vez.
-<img src="imagenes/lazyval.png" width="250" align="left" >
+En scala, se utilizan los lazy val, que solo se evaluan cuando se utilizan por primera vez. <br>
+<img src="imagenes/lazyval.png" width="250" align="left" > <br>
 
 
 Las funciones tambien pueden declarar parametros de Evaluacion perezosa CON Y: => Any
