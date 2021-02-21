@@ -93,11 +93,12 @@ La currificación es un mecanismo para la invocación parcial de funciones. Al l
 
 
 <b> Ejemplo de clase </b>
-
 def suma(a: Double, b: Double) = {<br>
   a+b <br>
 }<br>
-   
+--si no ponemos un parametro da error--- <br>
+
+--Con currying devuelve una funcion con el parametro faltante--    
 devuelve una funcion<br>
 def suma2(x:Double)=(y:Double) => x + y        <br>
 
