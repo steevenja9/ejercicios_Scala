@@ -13,8 +13,7 @@ Algunas de las caracteristicas que definen Scala son:
 
 </ul> <br>
 
-## 1.DEFINICIÓN DE FUNCIONES.</b>
-
+## 1.DEFINICIÓN DE FUNCIONES.</br>
 <img src="imagenes/funciones.png" width="400">
 
 Para definir una función se usa "def" y el nombre de la función. La declaración es muy similar a los lenguajes orientado a objetos ya que los parametros se colocan entre parentesis con su tipo. El operador ":" sirve para especificar dicho tipo, tanto de variables como de la propia función.
@@ -71,8 +70,7 @@ mul(5,7)<br>
 
 
 
-## 4.FUNCIONES DE ORDEN SUPERIOR</b>
-
+## 4.FUNCIONES DE ORDEN SUPERIOR</br>
 Las funciones de orden superior son aquellas que toman por parametros otras funciones, o devuelven como resultado una funcion. <br>
 
 
@@ -89,7 +87,7 @@ def lambda = new Function1[Int,Int]{
 define un parámetro de entrada de tipo int función anónima: <BR>
 var inc = (x:Int) => x+1
 
-<b>5.CURRIFICACIÓN</b> <br>
+## 5.CURRIFICACIÓN <br>
 
 En Scala, cuando un método es invocado con un número menor de listas de parámetros, en su lugar se devolverá una función que toma las listas faltantes como sus argumentos.
 
