@@ -99,7 +99,6 @@ def suma(a: Double, b: Double) = {<br>
 --si no ponemos un parametro da error--- <br>
 
 --Con currying devuelve una funcion con el parametro faltante--    
-devuelve una funcion<br>
 def suma2(x:Double)=(y:Double) => x + y        <br>
 
 val rest=suma2(1)                                <br>
