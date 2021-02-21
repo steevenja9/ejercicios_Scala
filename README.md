@@ -19,6 +19,28 @@ Algunas de las caracteristicas que definen Scala son:
 
 Para definir una función se usa "def" y el nombre de la función. La declaración es muy similar a los lenguajes orientado a objetos ya que los parametros se colocan entre parentesis con su tipo. El operador ":" sirve para especificar dicho tipo, tanto de variables como de la propia función.
 
+def functionName ([tipos]) : [return tipos] = {
+   function body
+   return [expr]
+}
+
+funcion con funciones como parametros
+def FuncionValor(f: Double => Double, x: Double , y: Double , z: Double ) = {
+   function body
+   return [expr]
+
+}
+
+funcion anonima
+def lambda = new Function1[Int,Int]{  
+	def anonima(x:Int):Int = x+1;  
+} 
+
+define un parámetro de entrada de tipo int función anónima:
+var inc = (x:Int) => x+1
+
+
+
 <b>2.PRIORIDAD DE OPERADORES Y TIPOS.</b>
 
 <img src="imagenes/Prioridad_tipos.png" width="800" height="500">
