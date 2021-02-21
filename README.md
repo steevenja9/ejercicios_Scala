@@ -48,29 +48,29 @@ EJ: Y: => Any <br>
 
 <b>SCALA</b> <br>
 
-	def soloprimero(x:Any, y: => Any) =  { <br>
-	println(x)  <br>
-	} <br>
-	soloprimero(2,7/0)                               //> res0: Int = 2 <br> 
+	def soloprimero(x:Any, y: => Any) =  { 
+	println(x)  
+	} 
+	soloprimero(2,7/0)                               //> res0: Int = 2  
 
 --Sin definir el parametro como perezoso este hace la operacion 7/0 Y DARIA ERROR <br>
 
 <b> Otro ejemplo para entenderlo mejor </b>
  
-	def mul(x:Double ,y: => Double) = x*x                 <br>
+	def mul(x:Double ,y: => Double) = x*x               
 
 <b>Dentro de scala</b> <br>
 
-	mul(5,5+2)   //> NO EVALUA EL SEGUNDO PARAMETRO            //> res0: Double = 25.0<br>
+	mul(5,5+2)   //> NO EVALUA EL SEGUNDO PARAMETRO            //> res0: Double = 25.0
 	5*5<br>
 	25<br>
 
 SIN EVAULACION PEREZOSA <br>
 
-	mul(5,5+2)                                       //> EVALUA Y HACE LA SUMA DEL 5+2 <br>
-	mul(5,7)<br>
-	5*5<br>
-	25<br>
+	mul(5,5+2)                                       //> EVALUA Y HACE LA SUMA DEL 5+2 
+	mul(5,7)
+	5*5
+	25
 
 
 
@@ -79,14 +79,14 @@ Las funciones de orden superior son aquellas que toman por parametros otras func
 
 --definir funcion = f: Double => Double<br><br>
 
-	def FuncionValor(f: Double => Double, x: Double , y: Double , z: Double ) = { <br>
-	   function body <br>
-	   return [expr] <br>
+	def FuncionValor(f: Double => Double, x: Double , y: Double , z: Double ) = { 
+	   function body 
+	   return [expr] 
 	}
 
 
-	def map (f: Int=>Int, l: List[Int]):List[Int] = <br>
-	      if (l == Nil) l else f(l.head)::map(f,l.tail)<br>
+	def map (f: Int=>Int, l: List[Int]):List[Int] = 
+	      if (l == Nil) l else f(l.head)::map(f,l.tail)
       
 
 ## 5.CURRIFICACIÓN <br>
@@ -96,16 +96,16 @@ La currificación es un mecanismo para la invocación parcial de funciones. Al l
 
 <b> Ejemplo de clase </b>
 
-     def suma(a: Double, b: Double) = {<br>
-     a+b <br>
-     }<br>
-     --si no ponemos un parametro da error--- <br>
+     def suma(a: Double, b: Double) = {
+     a+b 
+     }
+     --si no ponemos un parametro da error--- 
 
 --Con currying devuelve una funcion con el parametro faltante--    
 
-		def suma2(x:Double)=(y:Double) => x + y        <br>
-		val rest=suma2(1)                                <br>
-		rest(3) <br>                                    //> res0: Double = 4.0 <br>
+		def suma2(x:Double)=(y:Double) => x + y        
+		val rest=suma2(1)                                
+		rest(3)                                  //> res0: Double = 4.0 
 
 ## 6.COMPOSICION DE FUNCIONES<br>
 
@@ -122,13 +122,17 @@ Creemos las siguientes funciones y veamos como funciona la composición enn Scal
 
 Sumar el valor de todos los niveles<br> 
 
-	val toList: Niveles => List[Int] = niveles => List(niveles._1, niveles._2, niveles._3)<br> 
-	val sumaNiveles: Niveles => Int = toList.andThen(_.sum)<br> 
-	Calcular la diferencia entre el nivel más alto y el más bajo<br> 
-	val maxNivel: Niveles => Int = toList.andThen(_.max)<br> 
-	val minNivel: Niveles => Int = toList.andThen(_.min)<br> 
-	val diferenciaNiveles: Niveles => Int = niveles => maxNivel(niveles) - minNivel(niveles)<br> 
-	Sumar los niveles de una persona<br> 
+	val toList: Niveles => List[Int] = niveles => List(niveles._1, niveles._2, niveles._3)
+	val sumaNiveles: Niveles => Int = toList.andThen(_.sum)
+	
+	Calcular la diferencia entre el nivel más alto y el más bajo
+	
+	val maxNivel: Niveles => Int = toList.andThen(_.max) 
+	val minNivel: Niveles => Int = toList.andThen(_.min)
+	val diferenciaNiveles: Niveles => Int = niveles => maxNivel(niveles) - minNivel(niveles) 
+	
+	Sumar los niveles de una persona
+	
 	  def niveles(persona: Persona) = persona._2<br> 
 	  val sumaNivelesPersona: Persona => Int = sumaNiveles.compose(niveles)<br> 
 
@@ -139,29 +143,29 @@ En Scala para usar listas tenemos que usar el tipo List.<br>
 
  // Crear lista <br>
  
-         val list = List(1, 2, 3, 4, 5, 6, 7)<br> 	
+         val list = List(1, 2, 3, 4, 5, 6, 7)	
 
  // Aplicar metodo take<br>
  
-     val result = list.take(4) // gracias a la evaluacion perezosa <br> 
-    // solo genera los 4 primeros elementos de la lista <br>
+     val result = list.take(4) // gracias a la evaluacion perezosa 
+    // solo genera los 4 primeros elementos de la lista 
           
 // Añadir un elementos al principio de la lista // <br>
 
-	scala> val list2 = 4 :: list <br>
-	l3: List[Int] = List(4, 1, 2, 3) <br>
+	scala> val list2 = 4 :: list 
+	l3: List[Int] = List(4, 1, 2, 3) 
 	
 // Concatenar listas //<br>
 
-	List = List :+ List2 <br>
+	List = List :+ List2 
 
 // Añadir n elementos a la lista // <br>
      
-     scala> List.fill(3)("foo")<br>
-     res1: List[String] = List(foo, foo, foo)<br>
+     scala> List.fill(3)("foo")
+     res1: List[String] = List(foo, foo, foo)
 
 // Recorrer lista con for// <br>
 	
-     for(x <- lista) <br>
+     for(x <- lista) 
 	
 
