@@ -80,8 +80,8 @@ def FuncionValor(f: Double => Double, x: Double , y: Double , z: Double ) = { <b
 }
 
 
-def map (f: Int=>Int, l: List[Int]):List[Int] =
-      if (l == Nil) l else f(l.head)::map(f,l.tail)
+def map (f: Int=>Int, l: List[Int]):List[Int] = <br>
+      if (l == Nil) l else f(l.head)::map(f,l.tail)<br>
       
 
 ## 5.CURRIFICACIÓN <br>
