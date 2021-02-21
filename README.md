@@ -15,11 +15,11 @@ Algunas de las caracteristicas que definen Scala son:
 
 1.DEFINICIÓN DE FUNCIONES.
 
-def funcion(x: Double): Boolean = {}
+<img src="imagenes/funciones.png" width="400">
 
 Para definir una función se usa "def" y el nombre de la función. La declaración es muy similar a los lenguajes orientado a objetos ya que los parametros se colocan entre parentesis con su tipo. El operador ":" sirve para especificar dicho tipo, tanto de variables como de la propia función.
 
 2.PRIORIDAD DE OPERADORES Y TIPOS.
 
-<img src="imagenes/Prioridad_tipos.png" width="600">
+<img src="imagenes/Prioridad_tipos.png" width="800" height="500">
 
