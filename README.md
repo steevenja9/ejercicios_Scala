@@ -66,11 +66,11 @@ println(x)
 }                                                 //> solo: (x: Any, y: => Any)Unit
 soloprimero(2,7/0)                                //> 2
 
---SIN DEFINIR EVALUARIA EL 7/0 Y DARIA ERROR
+--SIN DEFINIR EVALUARIA EL 7/0 Y DARIA ERROR <br>
 
-OTRO EJEMPLO PARA ENTENDER MEJOR
+--OTRO EJEMPLO PARA ENTENDER MEJOR
 
-//OTRO EJEMPLO LO ENTIENDO MEJOR ASI // 
+--OTRO EJEMPLO LO ENTIENDO MEJOR ASI -- 
 def mul(x:Double ,y: => Double) = x*x                //> mul: (x: Double, y:Double)Double
 
 //DENTRO DE ESCALA 
