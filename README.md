@@ -99,10 +99,10 @@ def suma(a: Double, b: Double) = {
 }
    
 devuelve una funcion
-def suma2(x:Double)=(y:Double) => x + y           //> suma2: (x: Double)Double => Double
+def suma2(x:Double)=(y:Double) => x + y        <br>
 
-val rest=suma2(1)                                 //> rest  : Double => Double = espaciopracticas$$$Lambda$11/114132791@3498ed
-rest(3)                                          //> res0: Double = 4.0
+val rest=suma2(1)                                <br>
+rest(3) <br>                                         //> res0: Double = 4.0 <br>
 
 
 
