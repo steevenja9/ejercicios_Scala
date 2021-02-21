@@ -73,13 +73,12 @@ mul(5,7)<br>
 
 ## 4.FUNCIONES DE ORDEN SUPERIOR</b>
 
-Las funciones de orden superior son aquellas que toman por parametros otras funciones, o devuelven como resultado una funcion.
+Las funciones de orden superior son aquellas que toman por parametros otras funciones, o devuelven como resultado una funcion. <br>
 
-funcion con funciones como parametros
-def FuncionValor(f: Double => Double, x: Double , y: Double , z: Double ) = {
-   function body
-   return [expr]
 
+def FuncionValor(f: Double => Double, x: Double , y: Double , z: Double ) = { <br>
+   function body <br>
+   return [expr] <br>
 }
 
 funcion anonima
