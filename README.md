@@ -57,7 +57,7 @@ Las funciones tambien pueden declarar parametros de Evaluacion perezosa<br>
 EJ: Y: => Any <br>
 
 
-<h3>EJERCICIO DE CLASE HASKELL</h3> <br>
+<b>EJERCICIO DE CLASE HASKELL</b> <br>
 SoloPrimero::a->b->a
 soloPrimero x _ = x
 
@@ -69,11 +69,11 @@ soloprimero(2,7/0)                               //> res0: Int = 2 <br>
 
 --Sin definir el parametro como perezoso este hace la operacion 7/0 Y DARIA ERROR <br>
 
-### Otro ejemplo para entenderlo mejor
+<b> Otro ejemplo para entenderlo mejor </b>
  
 def mul(x:Double ,y: => Double) = x*x                 <br>
 
-### Dentro de scala 
+<b>Dentro de scala</b> 
 mul(5,5+2)   //> NO EVALUA EL SEGUNDO PARAMETRO            //> res0: Double = 25.0<br>
 5*5<br>
 25<br>
