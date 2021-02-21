@@ -61,7 +61,7 @@ EJ: Y: => Any <br>
 SoloPrimero::a->b->a
 soloPrimero x _ = x
 
-<h3>SCALA</h3> <br>
+<b>SCALA</b> <br>
 def soloprimero(x:Any, y: => Any) =  { <br>
 println(x)  <br>
 } <br>
@@ -73,7 +73,7 @@ soloprimero(2,7/0)                               //> res0: Int = 2 <br>
  
 def mul(x:Double ,y: => Double) = x*x                 <br>
 
-<b>Dentro de scala</b> 
+<b>Dentro de scala</b> <br>
 mul(5,5+2)   //> NO EVALUA EL SEGUNDO PARAMETRO            //> res0: Double = 25.0<br>
 5*5<br>
 25<br>
