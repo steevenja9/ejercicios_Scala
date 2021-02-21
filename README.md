@@ -52,6 +52,40 @@ La evaluación perezosa, tambien llamada lazy evaluation o call-by-need, permite
 En scala, se utilizan los lazy val, que solo se evaluan cuando se utilizan por primera vez.
 <img src="imagenes/lazyval.png" width="250">
 
+
+Las funciones tambien pueden declarar parametros de Evaluacion perezosa CON Y: => Any
+EJERCICIO DE CLASE
+
+HASKELL
+SoloPrimero::a->b->a
+soloPrimero x _ = x
+
+SCALA
+def soloprimero(x:Any, y: => Any) =  {
+println(x)
+}                                                 //> solo: (x: Any, y: => Any)Unit
+soloprimero(2,7/0)                                //> 2
+
+--SIN DEFINIR EVALUARIA EL 7/0 Y DARIA ERROR
+
+OTRO EJEMPLO PARA ENTENDER MEJOR
+
+//OTRO EJEMPLO LO ENTIENDO MEJOR ASI // 
+def mul(x:Double ,y: => Double) = x*x                //> mul: (x: Double, y:Double)Double
+
+//DENTRO DE ESCALA 
+mul(5,5+2)   //> NO EVALUA EL SEGUNDO PARAMETRO            //> res0: Double = 25.0
+5*5
+25
+
+SIN EVAULACION PEREZOSA
+mul(5,5+2)                                       //> EVALUA Y HACE LA SUMA DEL 5+2
+mul(5,7)
+5*5
+25
+
+
+
 <b>4.FUNCIONES DE ORDEN SUPERIOR</b>
 
 
