@@ -90,10 +90,11 @@ La currificación es un mecanismo para la invocación parcial de funciones. Al l
 
 
 <b> Ejemplo de clase </b>
-def suma(a: Double, b: Double) = {<br>
-  a+b <br>
-}<br>
---si no ponemos un parametro da error--- <br>
+
+     def suma(a: Double, b: Double) = {<br>
+     a+b <br>
+     }<br>
+     --si no ponemos un parametro da error--- <br>
 
 --Con currying devuelve una funcion con el parametro faltante--    
 def suma2(x:Double)=(y:Double) => x + y        <br>
@@ -131,23 +132,27 @@ En Scala para usar listas tenemos que usar el tipo List.<br>
  
 
  // Crear lista <br>
-        val list = List(1, 2, 3, 4, 5, 6, 7)<br> 	
+ 
+         val list = List(1, 2, 3, 4, 5, 6, 7)<br> 	
 
  // Aplicar metodo take<br>
  
-   val result = list.take(4) // gracias a la evaluacion perezosa <br> 
- // solo genera los 4 primeros elementos de la lista <br>
+     val result = list.take(4) // gracias a la evaluacion perezosa <br> 
+    // solo genera los 4 primeros elementos de la lista <br>
           
 // Añadir un elementos al principio de la lista // <br>
-	scala> val l3 = 4 :: l2 <br>
+
+	scala> val list2 = 4 :: list <br>
 	l3: List[Int] = List(4, 1, 2, 3) <br>
 	
 // Concatenar listas //<br>
+
 	List = List :+ List2 <br>
 
 // Añadir n elementos a la lista // <br>
-	scala> List.fill(3)("foo")<br>
-	res1: List[String] = List(foo, foo, foo)<br>
+     
+     scala> List.fill(3)("foo")<br>
+     res1: List[String] = List(foo, foo, foo)<br>
 
 // Recorrer lista con for// <br>
 	
