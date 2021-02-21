@@ -203,7 +203,7 @@ En Scala para usar listas tenemos que usar el tipo List.<br>
 		if (lista.isEmpty) Nil
 	    else if (pred (lista.head)) lista.head :: miFilter(lista.tail, pred)
 		else miFiltro(lista.tail, pred)
-	}                                                 //> miFilter: [A](lista: List[A], pred: A => Boolean)List[A]
+	}                                                 //> mifiltro: [A](lista: List[A], pred: A => Boolean)List[A]
 
 	def par(x: Int) = x % 2 == 0                      //> par: (x: Int)Boolean
 
