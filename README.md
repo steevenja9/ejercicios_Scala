@@ -89,7 +89,7 @@ var inc = (x:Int) => x+1
 
 ## 5.CURRIFICACIÓN <br>
 
-La currificación es un mecanismo para la invocación parcial de funciones. Al invocar una función le pasamos todos sus parámetros y obtenemos un valor. Al invocarla parcialmente, le pasamos solo parte de esos parámetros y obtenemos una función. A esa otra función le pasamos el resto de parámetros para terminar obteniendo el resultado final.
+La currificación es un mecanismo para la invocación parcial de funciones. Al llamar a una función normalmente le pasamos todos los parámetros y nos devuelve un resultado. Al invocarla parcialmente, le pasamos solo parte de esos parámetros y obtenemos una función. A esa otra función le pasamos el resto de parámetros para terminar obteniendo el resultado final.
 
 
 
