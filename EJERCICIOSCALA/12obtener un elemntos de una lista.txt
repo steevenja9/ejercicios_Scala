@@ -1,0 +1,12 @@
+
+def getElemlist(list: List[Int], acc: (Int, Int)):Int = list match {
+    case Nil => 0
+    case head :: tail => {
+     if (acc._1 == acc._2)     // 1
+     list.head
+    else
+      getElemlist(tail, (acc._1 + 1, acc._2))     // 2
+   }
+   }                                              //> getElemlist: (list: List[Int], acc: (Int, Int))Int
+   
+  getElemlist(list, (0, 1))   // 3                //> res0: Int = 3
