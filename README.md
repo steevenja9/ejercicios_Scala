@@ -21,4 +21,5 @@ Para definir una función se usa "def" y el nombre de la función. La declaraci�
 
 2.PRIORIDAD DE OPERADORES Y TIPOS.
 
+<img src="imagenes/Prioridad_tipos.png" width="600">
 
