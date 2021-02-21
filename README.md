@@ -92,6 +92,22 @@ var inc = (x:Int) => x+1
 La currificación es un mecanismo para la invocación parcial de funciones. Al llamar a una función normalmente le pasamos todos los parámetros y nos devuelve un resultado. Al invocarla parcialmente, le pasamos solo parte de esos parámetros y obtenemos una función. A esa otra función le pasamos el resto de parámetros para terminar obteniendo el resultado final.
 
 
+<b> Ejemplo de clase </b>
+
+def suma(a: Double, b: Double) = {
+  a+b
+}
+   
+devuelve una funcion
+def suma2(x:Double)=(y:Double) => x + y           //> suma2: (x: Double)Double => Double
+
+val rest=suma2(1)                                 //> rest  : Double => Double = espaciopracticas$$$Lambda$11/114132791@3498ed
+rest(3)                                          //> res0: Double = 4.0
+
+
+
+
+
 
 
 
