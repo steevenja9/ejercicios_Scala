@@ -18,10 +18,10 @@ Algunas de las caracteristicas que definen Scala son:
 
 Para definir una función se usa "def" y el nombre de la función. La declaración es muy similar a los lenguajes orientado a objetos ya que los parametros se colocan entre parentesis con su tipo. El operador ":" sirve para especificar dicho tipo, tanto de variables como de la propia función.
 
-def functionName ([tipos]) : [return tipos] = {
-   function body
-   return [expr]
-}
+	def functionName ([tipos]) : [return tipos] = {
+	   function body
+	   return [expr]
+	}
 
 
 
@@ -42,31 +42,35 @@ EJ: Y: => Any <br>
 
 
 <b>EJERCICIO DE CLASE HASKELL</b> <br>
-SoloPrimero::a->b->a
-soloPrimero x _ = x
+
+	SoloPrimero::a->b->a
+	soloPrimero x _ = x
 
 <b>SCALA</b> <br>
-def soloprimero(x:Any, y: => Any) =  { <br>
-println(x)  <br>
-} <br>
-soloprimero(2,7/0)                               //> res0: Int = 2 <br> 
+
+	def soloprimero(x:Any, y: => Any) =  { <br>
+	println(x)  <br>
+	} <br>
+	soloprimero(2,7/0)                               //> res0: Int = 2 <br> 
 
 --Sin definir el parametro como perezoso este hace la operacion 7/0 Y DARIA ERROR <br>
 
 <b> Otro ejemplo para entenderlo mejor </b>
  
-def mul(x:Double ,y: => Double) = x*x                 <br>
+	def mul(x:Double ,y: => Double) = x*x                 <br>
 
 <b>Dentro de scala</b> <br>
-mul(5,5+2)   //> NO EVALUA EL SEGUNDO PARAMETRO            //> res0: Double = 25.0<br>
-5*5<br>
-25<br>
+
+	mul(5,5+2)   //> NO EVALUA EL SEGUNDO PARAMETRO            //> res0: Double = 25.0<br>
+	5*5<br>
+	25<br>
 
 SIN EVAULACION PEREZOSA <br>
-mul(5,5+2)                                       //> EVALUA Y HACE LA SUMA DEL 5+2 <br>
-mul(5,7)<br>
-5*5<br>
-25<br>
+
+	mul(5,5+2)                                       //> EVALUA Y HACE LA SUMA DEL 5+2 <br>
+	mul(5,7)<br>
+	5*5<br>
+	25<br>
 
 
 
@@ -74,14 +78,15 @@ mul(5,7)<br>
 Las funciones de orden superior son aquellas que toman por parametros otras funciones, o devuelven como resultado una funcion. <br>
 
 --definir funcion = f: Double => Double<br><br>
-def FuncionValor(f: Double => Double, x: Double , y: Double , z: Double ) = { <br>
-   function body <br>
-   return [expr] <br>
-}
+
+	def FuncionValor(f: Double => Double, x: Double , y: Double , z: Double ) = { <br>
+	   function body <br>
+	   return [expr] <br>
+	}
 
 
-def map (f: Int=>Int, l: List[Int]):List[Int] = <br>
-      if (l == Nil) l else f(l.head)::map(f,l.tail)<br>
+	def map (f: Int=>Int, l: List[Int]):List[Int] = <br>
+	      if (l == Nil) l else f(l.head)::map(f,l.tail)<br>
       
 
 ## 5.CURRIFICACIÓN <br>
@@ -97,10 +102,10 @@ La currificación es un mecanismo para la invocación parcial de funciones. Al l
      --si no ponemos un parametro da error--- <br>
 
 --Con currying devuelve una funcion con el parametro faltante--    
-def suma2(x:Double)=(y:Double) => x + y        <br>
 
-val rest=suma2(1)                                <br>
-rest(3) <br>                                         //> res0: Double = 4.0 <br>
+		def suma2(x:Double)=(y:Double) => x + y        <br>
+		val rest=suma2(1)                                <br>
+		rest(3) <br>                                    //> res0: Double = 4.0 <br>
 
 ## 6.COMPOSICION DE FUNCIONES<br>
 
@@ -116,15 +121,16 @@ Las funciones pueden ser compuestas usando “compose” y “andThen” para cr
 Creemos las siguientes funciones y veamos como funciona la composición enn Scala:<br> 
 
 Sumar el valor de todos los niveles<br> 
-val toList: Niveles => List[Int] = niveles => List(niveles._1, niveles._2, niveles._3)<br> 
-val sumaNiveles: Niveles => Int = toList.andThen(_.sum)<br> 
-Calcular la diferencia entre el nivel más alto y el más bajo<br> 
-val maxNivel: Niveles => Int = toList.andThen(_.max)<br> 
-val minNivel: Niveles => Int = toList.andThen(_.min)<br> 
-val diferenciaNiveles: Niveles => Int = niveles => maxNivel(niveles) - minNivel(niveles)<br> 
-Sumar los niveles de una persona<br> 
-  def niveles(persona: Persona) = persona._2<br> 
-  val sumaNivelesPersona: Persona => Int = sumaNiveles.compose(niveles)<br> 
+
+	val toList: Niveles => List[Int] = niveles => List(niveles._1, niveles._2, niveles._3)<br> 
+	val sumaNiveles: Niveles => Int = toList.andThen(_.sum)<br> 
+	Calcular la diferencia entre el nivel más alto y el más bajo<br> 
+	val maxNivel: Niveles => Int = toList.andThen(_.max)<br> 
+	val minNivel: Niveles => Int = toList.andThen(_.min)<br> 
+	val diferenciaNiveles: Niveles => Int = niveles => maxNivel(niveles) - minNivel(niveles)<br> 
+	Sumar los niveles de una persona<br> 
+	  def niveles(persona: Persona) = persona._2<br> 
+	  val sumaNivelesPersona: Persona => Int = sumaNiveles.compose(niveles)<br> 
 
 ## 7.LISTAS<br>
 
