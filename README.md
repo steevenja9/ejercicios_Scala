@@ -125,7 +125,11 @@ Sumar los niveles de una persona<br>
   def niveles(persona: Persona) = persona._2<br> 
   val sumaNivelesPersona: Persona => Int = sumaNiveles.compose(niveles)<br> 
 
+## 7.LISTAS<br>
 
+En Scala para usar listas tenemos que usar el tipo List.
+ 
+Se utiliza como se utilizan los corchetes en Haskell, pero separando sus elementos por comas
 
 
 
