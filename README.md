@@ -127,11 +127,32 @@ Sumar los niveles de una persona<br>
 
 ## 7.LISTAS<br>
 
-En Scala para usar listas tenemos que usar el tipo List.
+En Scala para usar listas tenemos que usar el tipo List.<br>
  
-Se utiliza como se utilizan los corchetes en Haskell, pero separando sus elementos por comas
 
+ // Crear lista <br>
+        val list = List(1, 2, 3, 4, 5, 6, 7)<br> 	
 
+ // aplicar metodo take<br>
+ 
+   val result = list.take(4) // gracias a la evaluacion perezosa <br> 
+ // solo genera los 4 primeros elementos de la lista <br>
+          
+// añadir un elementos al principio de la lista // <br>
+	scala> val l3 = 4 :: l2 <br>
+	l3: List[Int] = List(4, 1, 2, 3) <br>
+	
+// concatenar listas //<br>
+	List = List :+ List2 <br>
 
+// añadir n elementos a la lista // <br>
+	scala> List.fill(3)("foo")
+	res1: List[String] = List(foo, foo, foo)
+
+//recorrer lista con for// <br>
+	var i=0 <br>
+	for(x <- lista){ <br>
+	i +=1; <br>
+	} <br>
 
 
