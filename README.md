@@ -175,14 +175,28 @@ En Scala para usar listas tenemos que usar el tipo List.<br>
      for(x <- lista) x = x+1
      
  //Ejercicios con listas <br>
+ 
+	 val list = List (5,3,1,2,4)                       //> list  : List[Int] = List(5, 3, 1, 2, 4)
+ 
  //Primer elemento de la lista <br>
  
 	 def firstelement(l: List[Any]) = {
 	  l.head
 	}                                                 //> firstelement: (l: List[Any])Any
 	firstelement(list)                                //> res0: Any = 5
+	
+// sumar elementos de una lista Forma Recursiva
 
- 
+
+	def sumlista(lis: List[Int]): Int = {
+	  lis match {
+	    case x :: tail => x + sumlista(tail)
+	    case Nil => 0  // si es vacio return 0
+	  }
+	}                                                 //> sumlista: (lis: List[Int])Int
+
+	sumlista(list)                                    //> res0: Int = 15
+
 	
 ## 8.PATRONES<br>
 
