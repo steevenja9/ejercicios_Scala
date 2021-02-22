@@ -364,3 +364,25 @@ Existe prácticamente en todos los lenguajes y genera un código pequeño y eleg
 
 
 ## 11 EJERCICIOS DE CLASE<br>
+
+
+
+// EVALUAR UNA LISTA DE ENTEROS CON lista de FUNCIONES    
+
+	def map (f: List[Int => Int], l: List[Int]) = {
+	if (l == Nil) l else{
+	var dev: List[Any]=List()
+	for(li <- l){
+	var aux: List[Int]=List()
+	for(fun <- f) aux = aux :+ fun(li)
+	dev = dev :+ aux
+	}
+	dev
+	}
+	}                                             //> map: (f: List[Int => Int], l: List[Int])List[Any]
+
+    map(List((_*2),(_+3)),list)
+                                                  //> res0: List[Any] = List(List(10, 8), List(6, 6), List(2, 4), List(4, 5), List
+                                                  //| (8, 7))
+
+
