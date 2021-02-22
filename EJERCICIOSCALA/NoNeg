@@ -1,0 +1,10 @@
+
+def NoNeg(x: Double) = {
+	if(x >= 0) true
+	else false
+}                                                 //> NoNeg: (x: Double)Boolean
+
+def NoNeg2(x: Double) = x >= 3                    //> NoNeg2: (x: Double)Boolean
+
+NoNeg(2)                                          //> res0: Boolean = true
+NoNeg2(1)                                         //> res1: Boolean = false
