@@ -588,4 +588,94 @@ Es lo mas parecido a un ejemplo complejo que utiliza ambos tipos de coincidencia
 	}                                                 //> quitaBlancos2: (x: String)String
 
 	quitaBlancos2(str)                                 //> res1: String = aabbcc
+//Obtener elemento de una lista
+
+	def getElemlist(list: List[Int], acc: (Int, Int)):Int = list match {
+	    case Nil => 0
+	    case head :: tail => {
+	     if (acc._1 == acc._2)     // 1
+	     list.head
+	    else
+	      getElemlist(tail, (acc._1 + 1, acc._2))     // 2
+	   }
+	   }                                              //> getElemlist: (list: List[Int], acc: (Int, Int))Int
+
+	  getElemlist(list, (0, 1))   // 3                //> res0: Int = 3
+	  
+//Suma
+
+	def suma(a: Double, b: Double) = {
+	  a+b
+	}
+
+	/******con currying*******/ devuelve una funcion anonima con un argumento
+	def suma2(x:Double)=(y:Double) => x + y           //> suma2: (x: Double)Double => Double
+
+	val rest=suma2(1)                                 //> rest  : Double => Double = espaciopracticas$$$Lambda$11/114132791@3498ed
+	rest(3)                                          //> res0: Double = 4.0
+
+	suma2(2)(3)                                           //> res0: Double = 5.0
+
+	Esta forma se llama curry . Currying nos permite convertir una función que espera dos argumentos en una función que espera solo uno.
+	def suma2(x:Double)(y:Double) = x + y 
+	
+//Suma3
+
+	def suma3(a: Int, b: Int, c: Int) = {
+	  a+b+c
+	}                                                 //> suma3: (a: Int, b: Int, c: Int)Int
+
+	suma3(1, 3, 5) 
+							  //> res0: Int = 9
+
+	def suma3curried(a: Int, b: Int) = {
+	  def temp(c: Int) = {
+	    suma3(a, b, c) // a y b los guarda y devuelve una funcion de un argumento  c
+	  }
+	  temp _
+	}   
+						      //> suma3curried: (a: Int, b: Int)Int => Int
+	val devf =suma3curried(1,2)                       //> devf  : Int => Int = espaciopracticas$$$Lambda$11/114132791@3498ed
+	devf(4)                                           //> res1: Int = 7
+
+
+	def suma3curried2(a: Double) = {
+	  def temp(c: Double, b: Double) = {
+	    suma3(a, b, c) // devuelve una funcion de 2 argumentos
+	  }
+	  temp _ 
+	}                                                 //> suma3curried: (a: Double)(Double, Double) => Double
+	val devf =suma3curried2(1)                        //> devf  : (Double, Double) => Double = espaciopracticas$$$Lambda$11/328638398@
+							  //| 3d8c7aca
+	devf(4,5)                                         //> res1: Double = 10.0
+
+
+//SumaLista
+
+	val list = List (5,3,1,2,4)                       //> list  : List[Int] = List(5, 3, 1, 2, 4)
+
+	def sumlista(lis: List[Int]): Int = {
+	  lis match {
+	    case x :: tail => x + sumlista(tail)
+	    case Nil => 0  // si es vacio return 0
+	  }
+	}                                                 //> sumlista: (lis: List[Int])Int
+
+	sumlista(list)                                    //> res0: Int = 15
+
+
+	def sum(list: List[Int]): Int = list match {
+	    case Nil => 0
+	    case n :: rest => n + sum(rest)
+	}                                                 //> sum: (list: List[Int])Int
+
+
+	def mult(list: List[Int]): Int = list match {
+	    case Nil => 1
+	    case n :: rest => n * mult(rest)
+	}                                                 //> mult: (list: List[Int])Int
+
+	mult(list)                                        //> res0: Int = 120
+	sum(list)                                         //> res1: Int = 15
+
 //
