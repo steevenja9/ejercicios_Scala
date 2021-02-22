@@ -1,0 +1,27 @@
+
+def divisores(n: Int): List[Int] = {
+var div = for(i <- (1 to n).toList
+if(n % i ==0)) yield(i)
+div
+
+}                                                 //> divisores: (n: Int)List[Int]
+def Esprimo(x: Int) = {
+	if(divisores(x).length == 2 & divisores(x).length > 0) true
+	else false
+}                                                 //> Esprimo: (x: Int)Boolean
+
+def Primos(list: List[Int]) = {
+	var list: List[Int] = List()
+	for(x <- list) if(Esprimo(x)) list = list :+ x
+	list
+}                                                 //> Primos: (list: List[Int])List[Int]
+
+
+def euler3(x: Int)={
+	var l: List[Int] = List()
+	for(y <- divisores(x)) if(Esprimo(y)) l = l :+ y
+	l
+}                                                 //> euler3: (x: Int)List[Int]
+euler3(99745)                                     //> res0: List[Int] = List(5, 19949)
+
+
