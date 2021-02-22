@@ -562,4 +562,30 @@ Es lo mas parecido a un ejemplo complejo que utiliza ambos tipos de coincidencia
 							  //> map: (f: Int => Int, l: List[Int])List[Int]
 	map(suma(_,3),list)                               //> res0: List[Int] = List(8, 6, 4, 5, 7)
 
+//Quitablancos
+
+	val str ="aa bb cc"                               //> str  : String = aa bb cc
+
+
+	de forma recursiva
+
+	def quitaBlancos(x: String): String = {
+	if(x == "")x
+	else if (x.head!= ' ') x.head + quitaBlancos2(x.tail)
+		else quitaBlancos2(x.tail)
+
+	}                                                 //> quitaBlancos: (x: String)String
+	quitaBlancos(str)                                //> res2: String = aabbcc
+
+
+	def quitaBlancos2(x: String) = {
+		var devS: String = ""
+		for(s <- x){
+			if(s == ' ') 0
+			else devS = devS :+ s
+		}
+		devS
+	}                                                 //> quitaBlancos2: (x: String)String
+
+	quitaBlancos2(str)                                 //> res1: String = aabbcc
 //
