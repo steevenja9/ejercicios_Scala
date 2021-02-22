@@ -758,4 +758,18 @@ def funcionTupla(a: (Double => Double, Double, Double => Double)) = a._1(a._2) +
 	def predecesor(x: Int) = (x-1)                    //> predecesor: (x: Int)Int
 	predecesor(2)                                     //> res0: Int = 1
 	
-//	
+//XOR
+
+	def XOR(x: Boolean) = (y: Boolean) => (x & !y || !x & y) //> XOR: (x: Boolean)Boolean => Boolean
+	 XOR(true)(false)                                  //> res0: Boolean = true                                                 
+
+	def AND(x: Boolean) = (y: Boolean) => (x & y)     //> AND: (x: Boolean)Boolean => Boolean
+	AND(true)(false)                                  //> res1: Boolean = false
+
+	def OR(x: Boolean) = (y: Boolean) => (x || y)     //> OR: (x: Boolean)Boolean => Boolean
+	OR(true)(false)                                   //> res2: Boolean = true
+
+	def NOT(x: Boolean) = !x                          //> NOT: (x: Boolean)Boolean
+	NOT(true)                                         //> res3: Boolean = false
+	
+FIN.
