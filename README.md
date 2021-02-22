@@ -1,35 +1,6 @@
-JAIME STEEVEN PUERTA MARTINEZ                                 UNIVERSIDAD DE HUELVA
+JAIME STEEVEN PUERTA MARTINEZ    ALBERTO MONTES RAMOS                                UNIVERSIDAD DE HUELVA
 
-                                                          MODELOS AVANZADOS DE COMPUTACION
-DIFERENCIAS ENTRE HASKEL Y SCALA
 
-<b>HASKEL<b> <br>
-1)Puramente funcional:  <br>
-No hay pautas, solo expresiones que no pueden mutar variables (locales o globales) ni acceder a estados como tiempo o números aleatorios. <br>
-
-2)Haskell tiene la característica principal de la evaluación perezosa. Asimismo, se denomina "llamada por necesidad", que es una estrategia en la que el desarrollador <br>
-puede aplazar la evaluación de una expresión hasta que se requiera o solicite su valor. Ayuda a evitar evaluaciones repetidas que potencian el intercambio, lo que reduce  <br>
-el tiempo de ejecución de las funciones. <br>
-
-3) Haskell es de código abierto, con una amplia gama de paquetes disponibles en los servidores públicos. Por ejemplo, base, parsec, etc. <br>
-4)Tipado estáticamente: en Haskell, el tipo de cada expresión se determina en el momento de la compilación. Todos los tipos compuestos juntos por aplicación de función deben<br> 
-estar coordinados o emparejados. En caso de que, si no coinciden, el compilador descartará el programa. <br>
-Inferencia de tipos: las clases de tipos son las características más impresionantes de Haskell, que permiten caracterizar interfaces genéricas. Son una gran idea dar una  <br>
-lista típica de características de diferentes tipos. Las características como calidad, pruebas y operadores numéricos utilizan las clases de Tipo <br>
-
-<b>SCALA</b> <br>
-
-1)Funcional: también es un lenguaje de programación funcional, ya que cada función es un valor y cada valor es un objeto. Proporciona soporte para funciones de orden superior, <br>
-funciones anidadas, funciones anónimas, etc. <br>
-2)Inferencia de tipo: en Scala, no es necesario mencionar el tipo de datos y los tipos de retorno de función explícitamente, deduce automáticamente el tipo de datos. <br>
-El tipo de función devuelto se estima por el tipo de última expresión presente en la función.<br>
-3)Inmutabilidad: Scala usa la idea de inmutabilidad en la que cada variable declarada es inmutable por supuesto. Inmutable significa que no puede modificar su valor.<br>
-Los datos inmutables ayudan a administrar el control de concurrencia que requiere la administración de datos. Además, podemos crear variables mutables cuyos valores <br>
-se pueden cambiar o alterar.<br><br>
-4)Orientado a objetos: cada valor en Scala es un objeto, por lo que es un lenguaje de programación puramente orientado a objetos. El comportamiento y el tipo de objetos <br>
-están representados por las clases y rasgos en Scala.<br>
-5)Ejecutar en JVM y puede ejecutar código Java: Java y Scala tienen un entorno de ejecución común. Por lo que el usuario puede pasar fácilmente de Java a Scala.<br>
-El compilador Scala compila el programa en un archivo .class, que contiene el código de bytes que puede ejecutar la JVM.<br>
 
 ## TRADUCCION DE EJERCICIOS DE HASKEL A SCALA       
 
