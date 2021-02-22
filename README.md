@@ -251,5 +251,38 @@ En Scala para usar listas tenemos que usar el tipo List.<br>
 Los patrones es una forma de estructurar el código de forma que al ejecutarse funciona de una manera muy similar a una estructura de control de switch.
 Consiste en asignar el valor a la función dependiendo del parámetro de entrada, en un orden jerárquico, de forma que los resultados van de mas especifico a mas general
 
-<img src="imagenes/patrones.png" width="800" height="500">
+
+	 def traduce(x: Double): String = {  
+	   x match {
+	  case 1 => "A"
+	  case 2 => "B"
+	  case 3 => "C"
+	  case 4 => "A"
+	  case _ => "X"
+	  }
+	}                                                 //> traduce: (x: Double)String
+
+	traduce(b)                                        //> res4: String = A
+
+ //Es lo mas parecido a un ejemplo complejo que utiliza ambos tipos de coincidencia de patrones
+ 
+	 def funcionLista(list : List[Any]) = list match {
+
+		 case Nil => "(none)"	
+		 case head :: Nil => "Coincide sólo con un elemento"
+		 case x :: y :: Nil => "coincide solo con dos elementos"
+		 case "Lili" :: tail => "Empareja el caso que comienza con Lili"
+		 case head :: tail => "El caso de hacer coincidir varios elementos"
+		 case _ => "Otras situaciones"
+	}
+
+
+	  def funcionLista(p: List[Any],list : List[Any]) = list match {
+		 case Nil => "(none)" 
+		 case head => list.head 	
+		 case tail => list.tail
+		 case _ => ""+list.head+", "+list.tail.head 
+	}
+
+		
 
