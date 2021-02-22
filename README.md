@@ -424,22 +424,9 @@ Existe prácticamente en todos los lenguajes y genera un código pequeño y eleg
 	}                                                 //> firstelement: (l: List[Any])Any
 	firstelement(list)                                //> res0: Any = 5
 	primer elemento de una list
-	
-//FuncionTupla
+	Es lo mas parecido a un ejemplo complejo que utiliza ambos tipos de coincidencia de patrones
 
-	val Entrada = List(("Jaime", 25), ("Alberto", 22), ("Richard", 27))
-                                                  //> Entrada  : List[(String, Int)] = List((Jaime,25), (Alberto,22), (Richard,27))
-                                                  //| 
-	
-	Entrada.foreach{
-	case ("Jaime", edad ) =>
-	 println(s"esta es mi $edad edad")
-	case _ =>
-	}                                         //> esta es mi 25 edad
-	
-//FuncionLista
-<br>
-Es lo mas parecido a un ejemplo complejo que utiliza ambos tipos de coincidencia de patrones
+//Ejemplo complejo que utiliza varios tipos de coincidencia de patrones
 
 	 def funcionLista(list : List[Any]) = list match {
 
@@ -458,9 +445,26 @@ Es lo mas parecido a un ejemplo complejo que utiliza ambos tipos de coincidencia
 		 case tail => list.tail
 		 case _ => ""+list.head+", "+list.tail.head 
 	}
-//CalculoLambda
+	
+//FuncionTupla
 
+	val Entrada = List(("Jaime", 25), ("Alberto", 22), ("Richard", 27))
+                                                  //> Entrada  : List[(String, Int)] = List((Jaime,25), (Alberto,22), (Richard,27))
+                                                  //| 
+	
+	Entrada.foreach{
+	case ("Jaime", edad ) =>
+	 println(s"esta es mi $edad edad")
+	case _ =>
+	}                                         //> esta es mi 25 edad
+	
+
+
+//CalculoLambda
+	//funcion Anonima o lambda
+	
 	(x: Int) => x + 1
+	
 	val lambda = (x: Double) => x + 1                 //> lambda  : Double => Double = espaciopracticas$$$Lambda$11/114132791@22f71333                                                  //| 
 	lambda(10)                                        //> res0: Double = 11.0
 	val w = 3                                         //> w  : Int = 3
