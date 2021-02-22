@@ -402,15 +402,15 @@ Existe prácticamente en todos los lenguajes y genera un código pequeño y eleg
 
 //Factorial
 
-	def factorial(n: Int): Int = {  
+	def factorial(n: BigInt): BigInt = {  
 		var f = 1
 		for(i <- 1 to n)
 		{
 		    f = f * i;
 		}
 		return f
-	    }                                             //> factorial: (n: Int)Int
-	    factorial(5)                                 //> res4: Int = 120
+	    }                                             //> factorial: (n: BigInt)BigInt
+	    factorial(5)                                 //> res4: BigInt = 120
 
 	/***con recursividad******/
 	 def factorial(n: Int): Int =
@@ -698,3 +698,10 @@ Es lo mas parecido a un ejemplo complejo que utiliza ambos tipos de coincidencia
 	var divisores = for{ i <- (1 to numero).toList 
 	if(numero%i == 0)}yield(i)
 	return divisores }
+	
+//Es un numero primo si/no
+
+	def esPrimo(numero: Int): List[Int] = {
+	return Divisores(numero).size==2
+	}
+//	
