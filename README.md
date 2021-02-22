@@ -385,4 +385,10 @@ Existe prácticamente en todos los lenguajes y genera un código pequeño y eleg
                                                   //> res0: List[Any] = List(List(10, 8), List(6, 6), List(2, 4), List(4, 5), List
                                                   //| (8, 7))
 
+//lista inversa
 
+	def ListaInversa(list: List[Int]): List[Int] = list match {
+	 case Nil => Nil
+	 case head :: tail => ListaInversa(tail) :+ head
+	 }
+	 
