@@ -1,0 +1,7 @@
+val Entrada =
+ List(("Jaime", 25, 667083245), ("Alberto", 22,61432789), ("Richard", 27, 65432189))
+Entrada.foreach{
+case ("nombre", edad, telefono) =>
+ println(s"Nuestro planeta está a $distance millones de kilómetros del Sol.")
+case _ =>
+}
