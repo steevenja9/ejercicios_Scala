@@ -344,11 +344,11 @@ Existe prácticamente en todos los lenguajes y genera un código pequeño y eleg
 		    return n * factorial(n-1) 
 	    } 
 	    
- // Quitar Blancos de un string
+ // Quitar Blancos de un string de forma recursiva
  
- val str ="aa bb cc"                               //> str  : String = aa bb cc
+	 val str ="aa bb cc"                               //> str  : String = aa bb cc
                                     
-de forma recursiva
+
 
 	def quitaBlancos(x: String): String = {
 	if(x == "")x
