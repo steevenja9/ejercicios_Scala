@@ -1,0 +1,7 @@
+def euler(x: Int) = {
+	var dev = 0
+	var list = List.tabulate(x-1)(s => s+1)
+	for(x <- list) if(x % 3 == 0 || x % 5 == 0) dev += x
+	dev
+}                                                 //> euler: (x: Int)Int
+euler(20)                                         //> res0: Int = 78
