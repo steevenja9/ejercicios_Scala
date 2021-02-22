@@ -427,4 +427,12 @@ Existe prácticamente en todos los lenguajes y genera un código pequeño y eleg
 	}                                                 //> firstelement: (l: List[Any])Any
 	firstelement(list)                                //> res0: Any = 5
 	primer elemento de una list
+//FuncionTupla
+	val Entrada =
+	 List(("Jaime", 25, 667083245), ("Alberto", 22,61432789), ("Richard", 27, 65432189))
+	Entrada.foreach{
+	case ("nombre", edad, telefono) =>
+	 println(s"Nuestro planeta está a $distance millones de kilómetros del Sol.")
+	case _ =>
+	}
 //
