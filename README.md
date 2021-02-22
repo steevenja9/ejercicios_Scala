@@ -284,12 +284,7 @@ Consiste en asignar el valor a la función dependiendo del parámetro de entrada
 	}
 
 
-	  def funcionLista(p: List[Any],list : List[Any]) = list match {
-		 case Nil => "(none)" 
-		 case head => list.head 	
-		 case tail => list.tail
-		 case _ => ""+list.head+", "+list.tail.head 
-	}
+	
 
 ## 9.TUPLAS<br>
 
