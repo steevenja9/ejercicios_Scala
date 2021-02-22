@@ -336,3 +336,25 @@ O en compresión de bucles for:
 La recursividad consiste en llamar al propio metodo con un tamaño menor al metodo original hasta llegar a un caso base de resolución sencilla e ir hacia atras luego resolviendo las subllamadas recursivas que se hicieron.Es muy usado en algoritmos resueltos por la tecnica Divide y Vencerás.
 Existe prácticamente en todos los lenguajes y genera un código pequeño y elegante.		
 
+	def factorial(n: Int): Int =
+	    { 
+		if (n == 0)  
+		    return 1
+		else
+		    return n * factorial(n-1) 
+	    } 
+	    
+ // Quitar Blancos de un string
+ 
+ val str ="aa bb cc"                               //> str  : String = aa bb cc
+                                    
+de forma recursiva
+
+	def quitaBlancos(x: String): String = {
+	if(x == "")x
+	else if (x.head!= ' ') x.head + quitaBlancos2(x.tail)
+		else quitaBlancos2(x.tail)
+
+	}                                                 //> quitaBlancos: (x: String)String
+	quitaBlancos(str)                                //> res2: String = aabbcc
+
