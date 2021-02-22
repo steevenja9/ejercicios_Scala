@@ -1,5 +1,5 @@
-def reversoList(list: List[Int]): List[Int] = list match {
- case head :: tail => reverseList(tail) :+ head
+def ListaInversa(list: List[Int]): List[Int] = list match {
  case Nil => Nil
+ case head :: tail => ListaInversa(tail) :+ head
  }
 
