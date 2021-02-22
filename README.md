@@ -372,7 +372,7 @@ Existe prácticamente en todos los lenguajes y genera un código pequeño y eleg
 
 
 
-// EVALUAR UNA LISTA DE ENTEROS CON lista de FUNCIONES    
+// EVALUAR UNA LISTA DE ENTEROS CON LISTA DE FUNCIONES    
 
 	def map (f: List[Int => Int], l: List[Int]) = {
 	if (l == Nil) l else{
@@ -395,7 +395,10 @@ Existe prácticamente en todos los lenguajes y genera un código pequeño y eleg
 	def ListaInversa(list: List[Int]): List[Int] = list match {
 	 case Nil => Nil
 	 case head :: tail => ListaInversa(tail) :+ head
-	 }
+	 }                                        //> ListaInversa: (list: List[Int])List[Int]
+	 
+	 val list= List(1,3,5,7,9)                //> list  : List[Int] = List(1, 3, 5, 7, 9)
+	 ListaInversa(list)                       //> res0: List[Int] = List(9, 7, 5, 3, 1)
 	 
 // divisible
 
@@ -421,14 +424,18 @@ Existe prácticamente en todos los lenguajes y genera un código pequeño y eleg
 	}                                                 //> firstelement: (l: List[Any])Any
 	firstelement(list)                                //> res0: Any = 5
 	primer elemento de una list
+	
 //FuncionTupla
 
-	val Entrada = List(("Jaime", 25, 667083245), ("Alberto", 22,61432789), ("Richard", 27, 65432189))
+	val Entrada = List(("Jaime", 25), ("Alberto", 22), ("Richard", 27))
+                                                  //> Entrada  : List[(String, Int)] = List((Jaime,25), (Alberto,22), (Richard,27))
+                                                  //| 
+	
 	Entrada.foreach{
-	case ("nombre", edad, telefono) =>
-	 println(s"Nuestro planeta está a $distance millones de kilómetros del Sol.")
+	case ("Jaime", edad ) =>
+	 println(s"esta es mi $edad edad")
 	case _ =>
-	}
+	}                                         //> esta es mi 25 edad
 	
 //FuncionLista
 <br>
