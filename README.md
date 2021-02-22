@@ -753,3 +753,9 @@ def funcionTupla(a: (Double => Double, Double, Double => Double)) = a._1(a._2) +
 
 	  getElemlist(list, (0, 1))   // 3                //> res0: Int = 3
 
+//predecesor
+
+	def predecesor(x: Int) = (x-1)                    //> predecesor: (x: Int)Int
+	predecesor(2)                                     //> res0: Int = 1
+	
+//	
