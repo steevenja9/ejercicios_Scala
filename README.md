@@ -222,19 +222,7 @@ En Scala para usar listas tenemos que usar el tipo List.<br>
 
 	sumlista(list)                                    //> res0: Int = 15
 	
- //Buscar en una lista los numeros pares
-
-	def mifiltro[A](lista: List[A], pred: (A)=>Boolean): List[A] = {
-		if (lista.isEmpty) Nil
-	    else if (pred (lista.head)) lista.head :: miFilter(lista.tail, pred)
-		else miFiltro(lista.tail, pred)
-	}                                                 //> mifiltro: [A](lista: List[A], pred: A => Boolean)List[A]
-
-	def par(x: Int) = x % 2 == 0                      //> par: (x: Int)Boolean
-
-	miFiltro(List(1,2,3,4), par)                      //> res0: List[Int] = List(2, 4)
-	
-	
+		
 // Lista invertida
 
 	def ListInvertida(list: List[Int]): List[Int] = list match {
@@ -243,19 +231,7 @@ En Scala para usar listas tenemos que usar el tipo List.<br>
 	 }
 	 
 	 
-  // Obtener un elemento de una lista
   
-	  def getElemlist(list: List[Int], acc: (Int, Int)):Int = list match {
-	    case Nil => 0
-	    case head :: tail => {
-	     if (acc._1 == acc._2)     // 1
-	     list.head
-	    else
-	      getElemlist(tail, (acc._1 + 1, acc._2))     // 2
-	   }
-	   }                                              //> getElemlist: (list: List[Int], acc: (Int, Int))Int
-
-	  getElemlist(list, (0, 1))   // 3                //> res0: Int = 3
 ## 8.PATRONES<br>
 
 Los patrones es una forma de estructurar el código de forma que al ejecutarse funciona de una manera muy similar a una estructura de control de switch.
@@ -725,3 +701,30 @@ Existe prácticamente en todos los lenguajes y genera un código pequeño y eleg
 	
 	
 ## Mas ejercicios
+
+ //Buscar en una lista los numeros pares
+
+	def mifiltro[A](lista: List[A], pred: (A)=>Boolean): List[A] = {
+		if (lista.isEmpty) Nil
+	    else if (pred (lista.head)) lista.head :: miFilter(lista.tail, pred)
+		else miFiltro(lista.tail, pred)
+	}                                                 //> mifiltro: [A](lista: List[A], pred: A => Boolean)List[A]
+
+	def par(x: Int) = x % 2 == 0                      //> par: (x: Int)Boolean
+
+	miFiltro(List(1,2,3,4), par)                      //> res0: List[Int] = List(2, 4)
+
+
+// Obtener un elemento de una lista
+  
+	  def getElemlist(list: List[Int], acc: (Int, Int)):Int = list match {
+	    case Nil => 0
+	    case head :: tail => {
+	     if (acc._1 == acc._2)     // 1
+	     list.head
+	    else
+	      getElemlist(tail, (acc._1 + 1, acc._2))     // 2
+	   }
+	   }                                              //> getElemlist: (list: List[Int], acc: (Int, Int))Int
+
+	  getElemlist(list, (0, 1))   // 3                //> res0: Int = 3
