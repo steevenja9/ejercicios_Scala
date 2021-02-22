@@ -691,6 +691,8 @@ Es lo mas parecido a un ejemplo complejo que utiliza ambos tipos de coincidencia
 	}                                                 //> traduce: (x: Double)String
 
 	traduce(b)                                        //> res4: String = A
+	
+## Mas ejercicios
 
 //Divisores de un numero
 
@@ -704,4 +706,10 @@ Es lo mas parecido a un ejemplo complejo que utiliza ambos tipos de coincidencia
 	def esPrimo(numero: Int): List[Int] = {
 	return Divisores(numero).size==2
 	}
-//	
+	
+//Primos de un numero	
+
+	def Primos(numero: Int): List[Int] = {
+	var primos = for{i <- (1 to numero).toList
+		if(esPrimo(i))} yield(i)
+	return primos }
