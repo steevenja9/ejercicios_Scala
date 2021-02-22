@@ -428,11 +428,99 @@ Existe prácticamente en todos los lenguajes y genera un código pequeño y eleg
 	firstelement(list)                                //> res0: Any = 5
 	primer elemento de una list
 //FuncionTupla
-	val Entrada =
-	 List(("Jaime", 25, 667083245), ("Alberto", 22,61432789), ("Richard", 27, 65432189))
+
+	val Entrada = List(("Jaime", 25, 667083245), ("Alberto", 22,61432789), ("Richard", 27, 65432189))
 	Entrada.foreach{
 	case ("nombre", edad, telefono) =>
 	 println(s"Nuestro planeta está a $distance millones de kilómetros del Sol.")
 	case _ =>
 	}
-//
+	
+//FuncionLista
+<br>
+Es lo mas parecido a un ejemplo complejo que utiliza ambos tipos de coincidencia de patrones
+
+	 def funcionLista(list : List[Any]) = list match {
+
+		 case Nil => "(none)"	
+		 case head :: Nil => "Coincide sólo con un elemento"
+		 case x :: y :: Nil => "coincide solo con dos elementos"
+		 case "Lili" :: tail => "Empareja el caso que comienza con Lili"
+		 case head :: tail => "El caso de hacer coincidir varios elementos"
+		 case _ => "Otras situaciones"
+	}
+
+
+	  def funcionLista(p: List[Any],list : List[Any]) = list match {
+		 case Nil => "(none)" 
+		 case head => list.head 	
+		 case tail => list.tail
+		 case _ => ""+list.head+", "+list.tail.head 
+	}
+//CalculoLambda
+
+	(x: Int) => x + 1
+	val lambda = (x: Double) => x + 1                 //> lambda  : Double => Double = espaciopracticas$$$Lambda$11/114132791@22f71333                                                  //| 
+	lambda(10)                                        //> res0: Double = 11.0
+	val w = 3                                         //> w  : Int = 3
+	val cierre = (x: Double) => x + w                 //> cierre  : Double => Double = espaciopracticas$$$Lambda$12/1789550256@5ebec15
+							  //| 
+	cierre(4)                                         //> res1: Double = 7.0
+//Listas
+
+	// Crear lista
+		val list = List(1, 2, 3, 4, 5, 6, 7) 	
+
+	// aplicar metodo take
+		val result = list.take(4) // gracias a la evaluacion perezosa 
+					  // solo genera los 4 primeros elementos de la lista
+
+
+	// añadir un elementos al principio de la lista */
+		scala> val l3 = 4 :: l2
+		l3: List[Int] = List(4, 1, 2, 3)
+
+		/+ concatenar listas */
+		List = List :+ List2
+
+		/* añadir n elementos a la lista */
+		scala> List.fill(3)("foo")
+		res1: List[String] = List(foo, foo, foo)
+
+
+		/*recorrer lista*/
+		var i=0
+		for(x <- lista){
+		i +=1;
+		}
+
+
+	def mayor(x: Double) = x >2                       //> mayor: (x: Double)Boolean
+
+
+	mayor(5)                                          //> res1: Boolean = true
+
+
+
+	val list3 = List.fill(10)(0)                      //> list3  : List[Int] = List(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+
+	list map (a => a + 1) foreach { a => print(" " + a) }
+
+	scala> val p = (1 to 20).toList
+	p: List[Int] = List(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20)
+	scala> for (k <- p if k % 3 == 0) yield("<" + k + ">")
+	res12: List[String] = List(<3>, <6>, <9>, <12>, <15>, <18>) 
+	
+//Listas filtrar
+
+	def miFilter[A](lista: List[A], pred: (A)=>Boolean): List[A] = {
+		if (lista.isEmpty) Nil
+	    else if (pred (lista.head)) lista.head :: miFilter(lista.tail, pred)
+		else miFilter(lista.tail, pred)
+	}                                                 //> miFilter: [A](lista: List[A], pred: A => Boolean)List[A]
+
+	def par(x: Int) = x % 2 == 0                      //> par: (x: Int)Boolean
+
+	miFilter(List(1,2,3,4), par)                      //> res0: List[Int] = List(2, 4)
+	
+//	
