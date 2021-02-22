@@ -1,6 +1,0 @@
-def reversoList(list: List[Int]): List[Int] = list match {
- case head :: tail => reverseList(tail) :+ head
- case Nil => Nil
- }
-
-Las colecciones de Scala brillan ya que casi nunca necesitamos recorrerlas explícitamente. Usando combinadores funcionales como map, flatMap y filter, hacemos las cosas de forma declarativa. Esto viene muy útil, como veremos pronto
