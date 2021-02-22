@@ -47,7 +47,7 @@ En scala, se utilizan los lazy val, que solo se evaluan cuando se utilizan por p
 Las funciones tambien pueden declarar parametros de Evaluacion perezosa<br>
 Se declara asi:  		
 
-	Y: => Any <br>
+	Y: => Any 
 
 <b>EJERCICIO DE CLASE HASKELL</b> <br>
 
