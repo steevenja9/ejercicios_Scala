@@ -233,7 +233,7 @@ En Scala para usar listas tenemos que usar el tipo List.<br>
 	 }
 	 
 	 
-  // Obtener un elemnto de una lista
+  // Obtener un elemento de una lista
   
 	  def getElemlist(list: List[Int], acc: (Int, Int)):Int = list match {
 	    case Nil => 0
@@ -284,5 +284,50 @@ Consiste en asignar el valor a la función dependiendo del parámetro de entrada
 		 case _ => ""+list.head+", "+list.tail.head 
 	}
 
+## 9.TUPLAS<br>
+
+Las tuplas son estructuras de datos similares a las listas, pero pueden almacenar valores de distinto tipo, por lo que a la hora de declararla no es necesario saber de qué tipo de valores se encargará de almacenar
+Para que dos tuplas se puedan comparar entre sí tienen que almacenar el mismo número y tipo de datos. Las tuplas son inmutables.
+
+Las tuplas son especialmente útiles para retornar múltiples valores desde un método.
+
+Una tupla con dos elementos puede ser creada del siguiente modo:
+
+	val ingredient = ("Sugar", 25)
+Esta instrucción crea una tupla que contiene un elemento de tipo String y un elemento de tipo Int.
+
+El tipo de la tupla ingredient se infiere que es(String, Int), lo cual es una abreviatura de Tuple2[String, Int].
+
+Para representar tuplas, Scala utiliza una serie de clases: Tuple2, Tuple3, etc., hasta Tuple22. Cada clase tiene tantos parámetros como número de elementos.
+
+# Accediendo a los elementos
+Una forma de acceder a los elementos de una tupla es por posición. Los elementos concretos se llaman _1, _2, y así sucesivamente.
+
+	println(ingredient._1) // Sugar
+	println(ingredient._2) // 25
+# Reconocimiento de patrones en tuplas
+Una tupla también puede ser dividida/expandida usando reconocimiento de patrones (pattern matching):
+
+	val (name, quantity) = ingredient
+	println(name)     // Sugar
+	println(quantity) // 25
+En esta ocasión el tipo de name es inferido como String y el de quantity como Int.
+
+A continuación otro ejemplo de reconocimiento de patrones con tuplas:
+
+	val planets =
+ 	 List(("Mercury", 57.9), ("Venus", 108.2), ("Earth", 149.6),
+       		("Mars", 227.9), ("Jupiter", 778.3))
+	planets.foreach{
+  	case ("Earth", distance) =>
+   	 println(s"Nuestro planeta está a $distance millones de kilómetros del Sol.")
+  	case _ =>
+	}
+O en compresión de bucles for:
+
+	val numPairs = List((2, 5), (3, -7), (20, 56))
+	for ((a, b) <- numPairs) {
+	  println(a * b)
+	}
 		
 
