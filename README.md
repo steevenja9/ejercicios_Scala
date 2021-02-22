@@ -339,7 +339,7 @@ O en compresión de bucles for:
 La recursividad consiste en llamar al propio metodo con un tamaño menor al metodo original hasta llegar a un caso base de resolución sencilla e ir hacia atras luego resolviendo las subllamadas recursivas que se hicieron.Es muy usado en algoritmos resueltos por la tecnica Divide y Vencerás.
 Existe prácticamente en todos los lenguajes y genera un código pequeño y elegante.		
 
-	def factorial(n: Int): Int =
+	def factorial(n: BigInt): BigInt =
 	    { 
 		if (n == 0)  
 		    return 1
@@ -413,7 +413,7 @@ Existe prácticamente en todos los lenguajes y genera un código pequeño y eleg
 	    factorial(5)                                 //> res4: BigInt = 120
 
 	/***con recursividad******/
-	 def factorial(n: Int): Int =
+	 def factorial(n: BigInt): BigInt =
 	    { 
 		if (n == 0)  
 		    return 1
