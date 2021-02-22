@@ -45,8 +45,9 @@ En scala, se utilizan los lazy val, que solo se evaluan cuando se utilizan por p
 
 
 Las funciones tambien pueden declarar parametros de Evaluacion perezosa<br>
-EJ: Y: => Any <br>
+Se declara asi:  		
 
+	Y: => Any <br>
 
 <b>EJERCICIO DE CLASE HASKELL</b> <br>
 
@@ -60,7 +61,7 @@ EJ: Y: => Any <br>
 	} 
 	soloprimero(2,7/0)                               //> res0: Int = 2  
 
---Sin definir el parametro como perezoso este hace la operacion 7/0 Y DARIA ERROR <br>
+--Sin definir el parametro como perezoso este hace la operacion 7/0 Y DA ERROR <br>
 
 <b> Otro ejemplo para entenderlo mejor </b>
  
@@ -146,8 +147,8 @@ Sumar el valor de todos los niveles<br>
 	
 	Sumar los niveles de una persona
 	
-	  def niveles(persona: Persona) = persona._2
-	  val sumaNivelesPersona: Persona => Int = sumaNiveles.compose(niveles)
+	 def niveles(persona: Persona) = persona._2
+	 val sumaNivelesPersona: Persona => Int = sumaNiveles.compose(niveles)
 
 ## 7.LISTAS<br>
 
