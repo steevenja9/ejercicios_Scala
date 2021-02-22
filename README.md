@@ -1,11 +1,11 @@
-JAIME STEEVEN PUERTA MARTINEZ    ALBERTO MONTES RAMOS                                UNIVERSIDAD DE HUELVA
+## JAIME STEEVEN PUERTA MARTINEZ    ALBERTO MONTES RAMOS                                UNIVERSIDAD DE HUELVA
 
 
 
-## TRADUCCION DE EJERCICIOS DE HASKEL A SCALA       
+# TRADUCCION DE EJERCICIOS DE HASKEL A SCALA       
 
 
-# DOCUMENTACION SCALA 
+## DOCUMENTACION SCALA 
 
 <b>0.INTRODUCCIÓN</b> <br> <br>
 Scala como lenguaje de programación es multi-paradigma y fue diseñado para expresar patrones comunes de programación de forma concisa, elegante y con tipos seguros. Teniendo características de lenguajes funcionales y orientados a objetos(OOP). Scala se ejecuta sobre la maquina virtual de java, con lo cual permite la unión con java. Esto es fantastico porque se puede programar en Java y Scala al mismo tiempo.
