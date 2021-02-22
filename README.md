@@ -711,7 +711,15 @@ Existe prácticamente en todos los lenguajes y genera un código pequeño y eleg
 
 // euler 2
 
+	def euler2(x: Int) = {
+		var list = List(1,2)
+		while(list.length < x) list = list :+ (list(list.length-2)+list(list.length-1))
+		list
+	}                                                 //> euler2: (x: Int)List[Int]
 
+	euler2(5)                                         //> res0: List[Int] = List(1, 2, 3, 5, 8)
+
+//funcion tupla
 	
 ## Mas ejercicios
 
