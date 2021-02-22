@@ -358,3 +358,6 @@ Existe prácticamente en todos los lenguajes y genera un código pequeño y eleg
 	}                                                 //> quitaBlancos: (x: String)String
 	quitaBlancos(str)                                //> res2: String = aabbcc
 
+
+
+## 11 EJERCICIOS DE CLASE<br>
