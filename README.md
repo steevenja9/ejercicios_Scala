@@ -329,5 +329,10 @@ O en compresión de bucles for:
 	for ((a, b) <- numPairs) {
 	  println(a * b)
 	}
-		
+	
+	
+## 10.RECURSIVIDAD<br>
+
+La recursividad consiste en llamar al propio metodo con un tamaño menor al metodo original hasta llegar a un caso base de resolución sencilla e ir hacia atras luego resolviendo las subllamadas recursivas que se hicieron.Es muy usado en algoritmos resueltos por la tecnica Divide y Vencerás.
+Existe prácticamente en todos los lenguajes y genera un código pequeño y elegante.		
 
