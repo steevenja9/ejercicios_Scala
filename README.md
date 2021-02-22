@@ -300,12 +300,12 @@ El tipo de la tupla ingredient se infiere que es(String, Int), lo cual es una ab
 
 Para representar tuplas, Scala utiliza una serie de clases: Tuple2, Tuple3, etc., hasta Tuple22. Cada clase tiene tantos parámetros como número de elementos.
 
-# Accediendo a los elementos
+<b>Accediendo a los elementos</b>
 Una forma de acceder a los elementos de una tupla es por posición. Los elementos concretos se llaman _1, _2, y así sucesivamente.
 
 	println(ingredient._1) // Sugar
 	println(ingredient._2) // 25
-# Reconocimiento de patrones en tuplas
+<b>Reconocimiento de patrones en tuplas</b>
 Una tupla también puede ser dividida/expandida usando reconocimiento de patrones (pattern matching):
 
 	val (name, quantity) = ingredient
