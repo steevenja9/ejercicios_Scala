@@ -534,14 +534,11 @@ Existe prácticamente en todos los lenguajes y genera un código pequeño y eleg
 							  //> res0: List[Any] = List(List(10, 8), List(6, 6), List(2, 4), List(4, 5), List
 							  //| (8, 7))
 
-	FUNCION DE ORDEN SUPERIOR//
-
-	//definicion funcion map //
-
 	def map (f: Int=>Int, l: List[Int]):List[Int] =
 	      if (l == Nil) l else f(l.head)::map(f,l.tail)
 							  //> map: (f: Int => Int, l: List[Int])List[Int]
 	map(suma(_,3),list)                               //> res0: List[Int] = List(8, 6, 4, 5, 7)
+
 
 //Quitablancos
 
@@ -721,6 +718,12 @@ Existe prácticamente en todos los lenguajes y genera un código pequeño y eleg
 
 //funcion tupla
 	
+def funcionTupla(a: (Double => Double, Double, Double => Double)) = a._1(a._2) + a._3(a._2)
+                                                  //> funcionTupla4: (a: (Double => Double, Double, Double => Double))Double
+
+ funcionTupla((_+3),5,(_-4))                     //> res1: Double = 9.0
+ 
+ 
 ## Mas ejercicios
 
  //Buscar en una lista los numeros pares
