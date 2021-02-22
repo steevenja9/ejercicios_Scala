@@ -691,3 +691,10 @@ Es lo mas parecido a un ejemplo complejo que utiliza ambos tipos de coincidencia
 	}                                                 //> traduce: (x: Double)String
 
 	traduce(b)                                        //> res4: String = A
+
+//Divisores de un numero
+
+	DivisoresNum(numero: Int): List[Int] = {
+	var divisores = for{ i <- (1 to numero).toList 
+	if(numero%i == 0)}yield(i)
+	return divisores }
