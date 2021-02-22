@@ -32,10 +32,12 @@ Para definir una función se usa "def" y el nombre de la función. La declaraci�
 
 
 
-## 2.PRIORIDAD DE OPERADORES Y TIPOS.<br>
+## 2.PRIORIDAD DE OPERADORES Y JERARQUIA DE TIPOS.<br>
 
+<b>Jerarquia de tipos</b><br>
 <img src="imagenes/Prioridad_tipos.png" width="800" height="500">
 
+<b>Prioridad de tipos</b><br>
 <img src="imagenes/prioridadOperadores.png" width="900" height="500">
 
 ##  3.EVALUACIÓN PEREZOSA <br>
@@ -405,17 +407,6 @@ Existe prácticamente en todos los lenguajes y genera un código pequeño y eleg
 
 //Factorial
 
-	def factorial(n: BigInt): BigInt = {  
-		var f = 1
-		for(i <- 1 to n)
-		{
-		    f = f * i;
-		}
-		return f
-	    }                                             //> factorial: (n: BigInt)BigInt
-	    factorial(5)                                 //> res4: BigInt = 120
-
-	/***con recursividad******/
 	 def factorial(n: BigInt): BigInt =
 	    { 
 		if (n == 0)  
