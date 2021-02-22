@@ -251,3 +251,5 @@ En Scala para usar listas tenemos que usar el tipo List.<br>
 Los patrones es una forma de estructurar el código de forma que al ejecutarse funciona de una manera muy similar a una estructura de control de switch.
 Consiste en asignar el valor a la función dependiendo del parámetro de entrada, en un orden jerárquico, de forma que los resultados van de mas especifico a mas general
 
+<img src="imagenes/patrones.png" width="800" height="500">
+
