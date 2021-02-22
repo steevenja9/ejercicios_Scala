@@ -293,7 +293,7 @@ Las tuplas son especialmente útiles para retornar múltiples valores desde un m
 
 Una tupla con dos elementos puede ser creada del siguiente modo:
 
-	val ingredient = ("Sugar", 25)
+	val ingrediente = ("Azucar", 25)
 Esta instrucción crea una tupla que contiene un elemento de tipo String y un elemento de tipo Int.
 
 El tipo de la tupla ingredient se infiere que es(String, Int), lo cual es una abreviatura de Tuple2[String, Int].
@@ -303,14 +303,14 @@ Para representar tuplas, Scala utiliza una serie de clases: Tuple2, Tuple3, etc.
 <b>Accediendo a los elementos</b>
 Una forma de acceder a los elementos de una tupla es por posición. Los elementos concretos se llaman _1, _2, y así sucesivamente.
 
-	println(ingredient._1) // Sugar
-	println(ingredient._2) // 25
+	println(ingrediente._1) // Sugar
+	println(ingrediente._2) // 25
 <b>Reconocimiento de patrones en tuplas</b>
 Una tupla también puede ser dividida/expandida usando reconocimiento de patrones (pattern matching):
 
-	val (name, quantity) = ingredient
-	println(name)     // Sugar
-	println(quantity) // 25
+	val (nombre, cantidad) = ingrediente
+	println(nombre)     // Sugar
+	println(cantidad) // 25
 En esta ocasión el tipo de name es inferido como String y el de quantity como Int.
 
 A continuación otro ejemplo de reconocimiento de patrones con tuplas:
