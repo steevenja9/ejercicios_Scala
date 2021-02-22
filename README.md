@@ -363,7 +363,7 @@ Existe prácticamente en todos los lenguajes y genera un código pequeño y eleg
 
 
 
-## 11 EJERCICIOS DE CLASE<br>
+## 11 EJERCICIOS<br>
 
 
 
