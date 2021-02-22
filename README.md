@@ -686,24 +686,31 @@ Es lo mas parecido a un ejemplo complejo que utiliza ambos tipos de coincidencia
 
 	traduce(b)                                        //> res4: String = A
 	
-## Mas ejercicios
+//euler
 
 //Divisores de un numero
 
-	DivisoresNum(numero: Int): List[Int] = {
-	var divisores = for{ i <- (1 to numero).toList 
-	if(numero%i == 0)}yield(i)
-	return divisores }
+	def divisores(n: Int): List[Int] = {
+	var div = for(i <- (1 to n).toList
+	if(n % i ==0)) yield(i)
+	div
+
+	}                                                 //> divisores: (n: Int)List[Int]
 	
 //Es un numero primo si/no
 
-	def esPrimo(numero: Int): List[Int] = {
-	return Divisores(numero).size==2
-	}
+	def Esprimo(x: Int) = {
+	if(divisores(x).length == 2 & divisores(x).length > 0) true
+	else false
+	}                                                 //> Esprimo: (x: Int)Boolean
 	
 //Primos de un numero	
 
-	def Primos(numero: Int): List[Int] = {
-	var primos = for{i <- (1 to numero).toList
-		if(esPrimo(i))} yield(i)
-	return primos }
+	def Primos(list: List[Int]) = {
+	var list: List[Int] = List()
+	for(x <- list) if(Esprimo(x)) list = list :+ x
+	list
+	}                                                 //> Primos: (list: List[Int])List[Int]
+	
+	
+## Mas ejercicios
