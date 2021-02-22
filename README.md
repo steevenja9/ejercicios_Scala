@@ -150,6 +150,21 @@ En Scala para usar listas tenemos que usar el tipo List.<br>
  // Crear lista <br>
  
          val list = List(1, 2, 3, 4, 5, 6, 7)	
+	 
+	 val p = (1 to 20).toList
+	 p: List[Int] = List(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20)
+	 
+	 for (k <- p if k % 3 == 0) yield("<" + k + ">")
+	 res1: List[String] = List(<3>, <6>, <9>, <12>, <15>, <18>) 
+	 
+	 
+	 list map (a => a + 1) foreach { a => print(" " + a) }
+	 
+
+//crear una lista de 10 elementos con 0 con fill
+	
+	val list3 = List.fill(10)(0)                      //> list3  : List[Int] = List(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+
 
  // Aplicar metodo take<br>
  
