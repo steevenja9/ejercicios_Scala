@@ -698,7 +698,20 @@ Existe prácticamente en todos los lenguajes y genera un código pequeño y eleg
 	for(x <- list) if(Esprimo(x)) list = list :+ x
 	list
 	}                                                 //> Primos: (list: List[Int])List[Int]
-	
+
+// Euler 1
+
+	def euler(x: Int) = {
+		var dev = 0
+		var list = List.tabulate(x-1)(s => s+1)
+		for(x <- list) if(x % 3 == 0 || x % 5 == 0) dev += x
+		dev
+	}                                                 //> euler: (x: Int)Int
+	euler(20)                                         //> res0: Int = 78
+
+// euler 2
+
+
 	
 ## Mas ejercicios
 
@@ -728,3 +741,4 @@ Existe prácticamente en todos los lenguajes y genera un código pequeño y eleg
 	   }                                              //> getElemlist: (list: List[Int], acc: (Int, Int))Int
 
 	  getElemlist(list, (0, 1))   // 3                //> res0: Int = 3
+
